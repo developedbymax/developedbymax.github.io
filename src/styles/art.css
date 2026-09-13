@@ -1,0 +1,178 @@
+/* ============================================================================
+   The three game miniatures.
+
+   None of these is an illustration of a game — each is the game's own geometry
+   at a smaller scale, taken from the source: Outrush's 6x6 board, 20pt wall,
+   4pt gutters and 0.46-cell gate notches come from OutrushRN/src/ui/Board.js and
+   the block radius and bevel from Block.js; Huecomb's pointy-top hex and its
+   band stack come from HuecombRN Tiles.js; Scrapglow's halo, recycler and debris
+   come from ScrapglowRN/src/game/Scene.js.
+
+   Every piece scales from a single custom property so the same component can be
+   a 150px thumbnail, a phone screen, or a 400px hero.
+   ========================================================================== */
+
+/* ============================ Outrush ============================ */
+.ob {
+  --pad: calc(var(--cell) * .38);
+  --gap: max(2px, calc(var(--cell) * .085));
+  --gl:  calc(var(--cell) * .46);      /* gate length */
+  --gt:  max(4px, calc(var(--cell) * .16));
+  position: relative;
+  width:  calc(var(--cell) * 6 + var(--pad) * 2);
+  height: calc(var(--cell) * 6 + var(--pad) * 2);
+  background: #443C7E;
+  border-radius: calc(var(--cell) * .38);
+  box-shadow: 0 26px 60px -22px rgba(0,0,0,.8);
+  flex: none;
+}
+.ob-pit {
+  position: absolute; inset: var(--pad);
+  background: #241F44; border-radius: calc(var(--cell) * .2);
+  /* an escaping block travels well past the wall before it finishes fading;
+     clipping it at the pit edge is what makes it read as leaving through the
+     wall rather than flying over it */
+  overflow: hidden;
+}
+.ob-cells {
+  position: absolute; inset: 0;
+  display: grid; grid-template: repeat(6, 1fr) / repeat(6, 1fr);
+}
+.ob-cells i {
+  background: #2C2755; border-radius: calc(var(--cell) * .16);
+  margin: calc(var(--gap) / 2);
+}
+.ob-gate { position: absolute; background: #4ADE9B; border-radius: 3px; }
+.ob-gate.t, .ob-gate.b {
+  width: var(--gl); height: var(--gt);
+  left: calc(var(--pad) + var(--i) * var(--cell) + (var(--cell) - var(--gl)) / 2);
+}
+.ob-gate.t { top: calc((var(--pad) - var(--gt)) / 2); }
+.ob-gate.b { bottom: calc((var(--pad) - var(--gt)) / 2); }
+.ob-gate.l, .ob-gate.r {
+  height: var(--gl); width: var(--gt);
+  top: calc(var(--pad) + var(--i) * var(--cell) + (var(--cell) - var(--gl)) / 2);
+}
+.ob-gate.l { left: calc((var(--pad) - var(--gt)) / 2); }
+.ob-gate.r { right: calc((var(--pad) - var(--gt)) / 2); }
+
+.ob-blk {
+  position: absolute;
+  left: calc(var(--c) * var(--cell) + var(--gap) / 2);
+  top:  calc(var(--r) * var(--cell) + var(--gap) / 2);
+  width:  calc(var(--w, 1) * var(--cell) - var(--gap));
+  height: calc(var(--h, 1) * var(--cell) - var(--gap));
+  background: var(--col); border-radius: calc(var(--cell) * .21);
+  display: grid; place-items: center; overflow: hidden;
+  font-size: calc(var(--cell) * .4); line-height: 1;
+  color: var(--glyph, rgba(22,10,48,.72));
+}
+.ob-blk::after {                            /* Block.js bevel */
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0;
+  height: 15%; background: rgba(0,0,0,.2);
+}
+.ob-blk .bdg {
+  position: absolute; top: 2%; right: 9%;
+  font-size: calc(var(--cell) * .2); line-height: 1;
+}
+/* the floating score the game pops on a clear (Fx.js) */
+.ob-pop {
+  position: absolute; left: 50%; top: 36%; transform: translateX(-50%);
+  font-weight: 900; font-size: calc(var(--cell) * .5); color: #FFC44D;
+  text-shadow: 0 2px 14px rgba(0,0,0,.65); opacity: 0;
+  pointer-events: none; white-space: nowrap;
+}
+/* The resting state above is visible and correct, exactly as Block.js draws it.
+   Motion is added only for visitors who have not asked for less of it. */
+@media (prefers-reduced-motion: no-preference) {
+  .ob-chain { animation: ob-escape 6.4s cubic-bezier(.4,0,.7,1) infinite; }
+  .ob-chain.c2 { animation-delay: .17s; }
+  .ob-chain.c3 { animation-delay: .34s; }
+  .ob-chain.c4 { animation-delay: .51s; }
+  .ob-pop { animation: ob-pop 6.4s ease-out infinite; }
+}
+@keyframes ob-escape {
+  0%, 52%     { transform: translate(0,0) scale(1); opacity: 1; }
+  62%         { transform: translate(calc(var(--cell) * 4.6), 0) scale(1); opacity: 0; }
+  62.01%, 88% { transform: translate(0,0) scale(.55); opacity: 0; }
+  100%        { transform: translate(0,0) scale(1); opacity: 1; }
+}
+@keyframes ob-pop {
+  0%, 58%   { opacity: 0; transform: translate(-50%, 0) scale(.8); }
+  66%       { opacity: 1; transform: translate(-50%, -12%) scale(1); }
+  78%       { opacity: 1; transform: translate(-50%, -24%) scale(1); }
+  86%, 100% { opacity: 0; transform: translate(-50%, -38%) scale(1); }
+}
+
+/* ============================ Huecomb ============================ */
+/* --u is one hex WIDTH. Height is 2/sqrt(3) of it and rows step sqrt(3)/2 of it,
+   which is the pointy-top tiling hex.js computes with. */
+.hc-wrap { filter: drop-shadow(0 20px 34px rgba(0,0,0,.55)); }
+.hc { position: relative; margin: 0 auto; }
+.hc-cell {
+  position: absolute;
+  width: var(--u); height: calc(var(--u) * 1.1547);
+}
+.hx {
+  position: absolute; left: 0; top: 0;
+  width: var(--u); height: calc(var(--u) * 1.1547);
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  background: var(--tc, #262147);
+}
+.hx.socket { background: #262147; }
+.hx.socket::after {
+  content: ""; position: absolute; inset: 0; top: 56%;
+  background: rgba(0,0,0,.32);
+}
+.hx.tile::after {                            /* Tiles.js side face */
+  content: ""; position: absolute; inset: 0; top: 62%;
+  background: rgba(0,0,0,.3);
+}
+.hx.cap { background: rgba(255,255,255,.22); transform: scale(.5); }
+
+/* the three stacks waiting under the board */
+.hc-tray {
+  position: relative; height: calc(var(--u) * 1.1547);
+  margin: calc(var(--u) * .52) auto 0;
+  width: calc(var(--u) * 3.9);
+}
+.hc-tray .hc-cell:nth-child(1) { left: 0; }
+.hc-tray .hc-cell:nth-child(2) { left: calc(var(--u) * 1.45); }
+.hc-tray .hc-cell:nth-child(3) { left: calc(var(--u) * 2.9); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .hc-lift { animation: hc-lift 6.2s ease-in-out infinite; }
+  .hc-lift.d1 { animation-delay: .1s; }
+  .hc-lift.d2 { animation-delay: .22s; }
+  .hc-lift.d3 { animation-delay: .34s; }
+}
+@keyframes hc-lift {
+  0%, 46%     { transform: translateY(0) scale(var(--s, 1)); opacity: 1; }
+  58%         { transform: translateY(calc(var(--u) * -1.2)) scale(var(--s, 1)); opacity: 0; }
+  58.01%, 86% { transform: translateY(calc(var(--u) * .3)) scale(var(--s, 1)); opacity: 0; }
+  100%        { transform: translateY(0) scale(var(--s, 1)); opacity: 1; }
+}
+.hx.cap { --s: .5; }
+
+/* ============================ Scrapglow ============================ */
+.sg { width: 100%; height: auto; filter: drop-shadow(0 22px 40px rgba(0,0,0,.6)); }
+@media (prefers-reduced-motion: no-preference) {
+  .sg-halo  { animation: sg-spin 9s linear infinite; transform-origin: 50% 50%; }
+  .sg-ship  { animation: sg-drift 11s ease-in-out infinite; }
+  .sg-pulse { animation: sg-pulse 3.4s ease-in-out infinite; transform-origin: 50% 50%; }
+  .sg-deb   { animation: sg-float 13s ease-in-out infinite; }
+  .sg-deb.b { animation-duration: 17s; animation-direction: reverse; }
+  .sg-deb.c { animation-duration: 15s; animation-delay: -4s; }
+}
+@keyframes sg-spin  { to { transform: rotate(360deg); } }
+@keyframes sg-pulse { 0%,100% { opacity: .32; transform: scale(1); } 50% { opacity: .72; transform: scale(1.1); } }
+@keyframes sg-drift {
+  0%, 100% { transform: translate(0, 0); }
+  25%      { transform: translate(3%, -3.5%); }
+  50%      { transform: translate(-2%, 2.5%); }
+  75%      { transform: translate(-3.5%, -1.5%); }
+}
+@keyframes sg-float {
+  0%, 100% { transform: translate(0, 0); }
+  50%      { transform: translate(-5%, 4%); }
+}

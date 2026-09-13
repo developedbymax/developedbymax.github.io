@@ -1,0 +1,25 @@
+{
+  "name": "developedbymax.github.io",
+  "version": "1.0.0",
+  "description": "The developed-by-max studio site: the landing page and a page for every game.",
+  "scripts": {
+    "dev": "vite",
+    "build:client": "vite build",
+    "build:server": "vite build --ssr src/entry-server.jsx --outDir dist-ssr",
+    "prerender": "node scripts/prerender.js",
+    "build": "npm run build:client && npm run build:server && npm run prerender",
+    "preview": "vite preview",
+    "serve": "npx --yes serve dist"
+  },
+  "type": "module",
+  "dependencies": {
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "react-router-dom": "^7.18.3"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.1.1",
+    "vite": "^8.3.0"
+  },
+  "private": true
+}

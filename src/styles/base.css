@@ -276,12 +276,12 @@ h4 { font-size: 16px; }
 /* ---------- footer ---------- */
 .site-foot {
   border-top: 1px solid var(--line);
-  padding: clamp(48px, 6vw, 72px) 0 44px;
+  padding: clamp(48px, 6vw, 72px) 0;
   background: var(--ground-2);
 }
 .foot-top {
   display: flex; align-items: flex-start; justify-content: space-between;
-  gap: 32px; flex-wrap: wrap; margin-bottom: 40px;
+  gap: 32px; flex-wrap: wrap;
 }
 .foot-top .blurb { font-size: 14.5px; max-width: 40ch; margin-top: 16px; }
 

@@ -332,7 +332,7 @@ function Approach() {
 
 function Closing() {
   return (
-    <section className="pad">
+    <section className="pad" id="contact">
       <div className="wrap">
         <Reveal className="band">
           <p className="eyebrow" style={{ justifyContent: 'center' }}>Say hello</p>

@@ -34,7 +34,10 @@ export function SiteHeader() {
           <NavLink to="/" end>Games</NavLink>
           <a href="/#approach">How I build</a>
           <span className="sep" aria-hidden="true" />
-          <a className="btn btn-quiet" href={`mailto:${EMAIL}`}>Get in touch</a>
+          {/* A plain anchor, not a Link, on purpose: on the home page the browser
+              treats it as a same-document fragment and just scrolls, and from the
+              404 page it loads the home page already at the right section. */}
+          <a className="btn btn-quiet" href="/#contact">Get in touch</a>
         </nav>
       </div>
     </header>
@@ -63,10 +66,6 @@ export function SiteFooter() {
             {EMAIL}
           </a>
         </div>
-
-        <p className="foot-base">
-          &copy; {new Date().getFullYear()} developed by max. All games and artwork are mine.
-        </p>
       </div>
     </footer>
   );

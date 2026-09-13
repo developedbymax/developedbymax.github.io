@@ -21,6 +21,13 @@ export default function PhoneScreen({ game, hud, label }) {
         <div className="mini-body">
           <GameArt slug={game.slug} size="phone" label={label} />
         </div>
+        {/* the row of controls every one of these games keeps at the bottom of
+            the screen — shape only, so the screen reads as a screen */}
+        <div className="mini-bar" aria-hidden="true">
+          <i style={{ background: t.accent }} />
+          <i />
+          <i />
+        </div>
       </div>
       <span className="phone-label">{game.name}</span>
     </div>

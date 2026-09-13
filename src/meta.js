@@ -52,6 +52,13 @@ export const meta = {
     themeColor: '#091521',
     favicon: '/favicon-scrapglow.svg',
   },
+  '/scrapglow/privacy': {
+    title: 'Privacy Policy & Terms of Use — Scrapglow',
+    description:
+      'What Scrapglow stores on your device, what its advertising partner collects, what Remove break ads does and does not stop, and the terms you agree to when you play.',
+    themeColor: '#091521',
+    favicon: '/favicon-scrapglow.svg',
+  },
 
   '/404': {
     title: 'Page not found — developed by max',
@@ -61,16 +68,28 @@ export const meta = {
   },
 };
 
-/* The legal pages are also emitted at their old .html addresses. Outrush's
-   privacy URL is baked into the shipped app and into two store listings, and it
-   currently points at /outrush/privacy.html on this same domain — keeping that
-   exact file here means the old links keep resolving after the separate
-   outrush repository is deleted. */
+/* Every game has its OWN privacy policy and terms, at its own URL, because that
+   is the URL each store listing and each AppLovin app is given — one document
+   covering all three would be wrong for all three. The differences are real:
+   Outrush and Huecomb sell three things and never start the ad SDK once Remove
+   Ads is bought; Scrapglow sells one and deliberately keeps the rewarded rescue,
+   so its ad code still runs afterwards.
+
+   Each is also emitted at the .html spelling. For Outrush that is a requirement
+   rather than a nicety — its privacy URL is baked into the shipped app and into
+   two store listings as /outrush/privacy.html on this same domain, so keeping
+   that exact file here is what makes the old links survive the separate outrush
+   repository being deleted. The other two follow the same pattern so the
+   store-facing URLs are uniform across the games. */
 export const ALIASES = {
   '/outrush/privacy.html': '/outrush/privacy',
   '/huecomb/privacy.html': '/huecomb/privacy',
+  '/scrapglow/privacy.html': '/scrapglow/privacy',
 };
 
 export const ROUTES = [
-  '/', '/outrush', '/outrush/privacy', '/huecomb', '/huecomb/privacy', '/scrapglow',
+  '/',
+  '/outrush', '/outrush/privacy',
+  '/huecomb', '/huecomb/privacy',
+  '/scrapglow', '/scrapglow/privacy',
 ];

@@ -64,6 +64,21 @@ export function SiteFooter() {
             </ul>
           </div>
 
+          {/* Each game is a separate app with its own privacy policy and terms, and
+              its own URL for the two stores and AppLovin to point at. Listing one
+              of them here as though it were the site's would be wrong, and would
+              be the thing a store reviewer notices. */}
+          <div className="foot-col">
+            <h4>Privacy &amp; terms</h4>
+            <ul>
+              {games.filter((g) => g.hasLegal).map((g) => (
+                <li key={g.slug}>
+                  <Link to={`/${g.slug}/privacy`}>{g.name}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           <div className="foot-col">
             <h4>Elsewhere</h4>
             <ul>
@@ -78,7 +93,6 @@ export function SiteFooter() {
                   <Github width="16" height="16" /> GitHub
                 </a>
               </li>
-              <li><Link to="/outrush/privacy">Privacy &amp; terms</Link></li>
             </ul>
           </div>
         </div>

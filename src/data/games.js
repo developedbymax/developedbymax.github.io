@@ -99,7 +99,7 @@ export const games = [
       ['15', 'Original sound effects'],
       ['0', 'Accounts or logins'],
     ],
-    hasLegal: false,
+    hasLegal: true,
   },
 ];
 

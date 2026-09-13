@@ -6,6 +6,7 @@ import OutrushLegal from './pages/OutrushLegal.jsx';
 import Huecomb from './pages/Huecomb.jsx';
 import HuecombLegal from './pages/HuecombLegal.jsx';
 import Scrapglow from './pages/Scrapglow.jsx';
+import ScrapglowLegal from './pages/ScrapglowLegal.jsx';
 import NotFound from './pages/NotFound.jsx';
 
 import './styles/base.css';
@@ -27,15 +28,18 @@ export default function App() {
         <Route path="/huecomb/privacy" element={<HuecombLegal />} />
 
         <Route path="/scrapglow" element={<Scrapglow />} />
+        <Route path="/scrapglow/privacy" element={<ScrapglowLegal />} />
 
-        {/* The addresses the previous per-game sites used. Outrush's privacy URL
-            is baked into the shipped app and into two store listings, so these
-            have to keep resolving — they are emitted as real files by the
+        {/* The .html spelling of each game's legal page. Outrush's privacy URL is
+            baked into the shipped app and into two store listings, so that one has
+            to keep resolving; the others follow the same pattern so the
+            store-facing URLs are uniform. All are emitted as real files by the
             prerenderer, and matched here too for a client-side navigation. */}
         <Route path="/outrush/index.html" element={<Outrush />} />
         <Route path="/outrush/privacy.html" element={<OutrushLegal />} />
         <Route path="/huecomb/index.html" element={<Huecomb />} />
         <Route path="/huecomb/privacy.html" element={<HuecombLegal />} />
+        <Route path="/scrapglow/privacy.html" element={<ScrapglowLegal />} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>

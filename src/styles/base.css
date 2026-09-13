@@ -280,11 +280,13 @@ h4 { font-size: 16px; }
   background: var(--ground-2);
 }
 .foot-grid {
-  display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px;
+  display: grid; grid-template-columns: 1.5fr 1fr 1.2fr 1fr; gap: 40px;
   margin-bottom: 46px;
 }
-@media (max-width: 760px) { .foot-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
-@media (max-width: 460px) { .foot-grid { grid-template-columns: 1fr; } }
+@media (max-width: 900px) { .foot-grid { grid-template-columns: 1fr 1fr 1fr; gap: 34px; } }
+@media (max-width: 900px) { .foot-grid > div:first-child { grid-column: 1 / -1; } }
+@media (max-width: 620px) { .foot-grid { grid-template-columns: 1fr 1fr; gap: 30px; } }
+@media (max-width: 400px) { .foot-grid { grid-template-columns: 1fr; } }
 .foot-grid .blurb { font-size: 14.5px; max-width: 34ch; margin-top: 16px; }
 .foot-col h4 {
   font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;

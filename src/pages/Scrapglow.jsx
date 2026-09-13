@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { bySlug, statusLabel } from '../data/games.js';
 import GameShell from '../components/GameShell.jsx';
 import ScrapglowArena from '../components/art/ScrapglowArena.jsx';
@@ -13,6 +14,7 @@ const NAV = [
   ['How it plays', '#play'],
   ['The catch', '#catch'],
   ['What is in it', '#inside'],
+  ['Privacy', '/scrapglow/privacy'],
 ];
 
 const STEPS = [
@@ -154,6 +156,45 @@ export default function Scrapglow() {
               </div>
             ))}
           </Reveal>
+        </div>
+      </section>
+
+      <section className="pad-s">
+        <div className="wrap">
+          <div className="g2">
+            <Reveal>
+              <p className="eyebrow">Your data</p>
+              <h2>Your scores stay on your phone</h2>
+              <p>
+                There is no account, no sign-in and no server. Your best score, your totals,
+                your settings and the expedition you are part way through are written to the
+                device and are never uploaded anywhere. Uninstall the game and they are gone
+                with it.
+              </p>
+              <p>
+                Scrapglow has its own privacy policy, separate from the other games, because
+                what it does is different: it sells one thing rather than three, it ships no
+                crash reporting at all, and <b>Remove break ads</b> deliberately keeps the
+                rescue ad you choose to watch.
+              </p>
+              <p>
+                <Link to="/scrapglow/privacy" style={{ color: 'var(--accent)', fontWeight: 700 }}>
+                  Read Scrapglow&rsquo;s privacy policy &rarr;
+                </Link>
+              </p>
+            </Reveal>
+
+            <Reveal className="step" delay={90}>
+              <h3>The short version</h3>
+              <ul className="bullets">
+                <li>Plays fully offline.</li>
+                <li>No account, no email, no sign-in.</li>
+                <li>No location, contacts, photos or microphone.</li>
+                <li>No crash reporting and no analytics, at all.</li>
+                <li>Scores never leave the device.</li>
+              </ul>
+            </Reveal>
+          </div>
         </div>
       </section>
 

@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { games } from '../data/games.js';
-import { Arrow, Mail, Github } from './Icons.jsx';
+import { Arrow, Mail } from './Icons.jsx';
 
 export const EMAIL = 'developedbymax@gmail.com';
 
@@ -42,65 +41,32 @@ export function SiteHeader() {
   );
 }
 
+/* Deliberately thin. A footer is where someone looks for one of two things —
+   who made this, and how to reach them — and the per-game legal documents are
+   linked from the game pages they belong to, which is also where a store
+   reviewer arrives. Listing all of it twice only made this harder to read. */
 export function SiteFooter() {
   return (
     <footer className="site-foot">
       <div className="wrap">
-        <div className="foot-grid">
+        <div className="foot-top">
           <div>
             <Mark />
             <p className="blurb">
-              Small, tactile mobile games made by one person in the open. No accounts,
-              no servers, nothing following you around.
+              Small, tactile mobile games made by one person. No accounts, no servers,
+              nothing following you around.
             </p>
           </div>
 
-          <div className="foot-col">
-            <h4>Games</h4>
-            <ul>
-              {games.map((g) => (
-                <li key={g.slug}><Link to={`/${g.slug}`}>{g.name}</Link></li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Each game is a separate app with its own privacy policy and terms, and
-              its own URL for the two stores and AppLovin to point at. Listing one
-              of them here as though it were the site's would be wrong, and would
-              be the thing a store reviewer notices. */}
-          <div className="foot-col">
-            <h4>Privacy &amp; terms</h4>
-            <ul>
-              {games.filter((g) => g.hasLegal).map((g) => (
-                <li key={g.slug}>
-                  <Link to={`/${g.slug}/privacy`}>{g.name}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="foot-col">
-            <h4>Elsewhere</h4>
-            <ul>
-              <li>
-                <a href={`mailto:${EMAIL}`} style={{ display: 'inline-flex', gap: 9, alignItems: 'center' }}>
-                  <Mail width="16" height="16" /> Email
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/developedbymax" rel="noopener" target="_blank"
-                   style={{ display: 'inline-flex', gap: 9, alignItems: 'center' }}>
-                  <Github width="16" height="16" /> GitHub
-                </a>
-              </li>
-            </ul>
-          </div>
+          <a className="foot-mail" href={`mailto:${EMAIL}`}>
+            <Mail width="18" height="18" />
+            {EMAIL}
+          </a>
         </div>
 
-        <div className="foot-base">
-          <p>&copy; {new Date().getFullYear()} developed by max. All games and artwork are mine.</p>
-          <p>Built with React. Hosted on GitHub&nbsp;Pages.</p>
-        </div>
+        <p className="foot-base">
+          &copy; {new Date().getFullYear()} developed by max. All games and artwork are mine.
+        </p>
       </div>
     </footer>
   );

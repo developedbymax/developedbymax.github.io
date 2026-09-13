@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { games, statusLabel, TOTAL_PLANNED } from '../data/games.js';
 import { SiteHeader, SiteFooter, EMAIL } from '../components/Layout.jsx';
-import { Arrow, Mail, Github, Shield, Spark } from '../components/Icons.jsx';
+import { Arrow, Mail, Shield, Spark } from '../components/Icons.jsx';
 import Reveal from '../components/Reveal.jsx';
 import PhoneScreen from '../components/art/PhoneScreen.jsx';
 import GameArt from '../components/art/GameArt.jsx';
@@ -346,9 +346,6 @@ function Closing() {
           </p>
           <div className="cta-row">
             <a className="btn btn-key" href={`mailto:${EMAIL}`}><Mail width="17" height="17" />Email me</a>
-            <a className="btn btn-quiet" href="https://github.com/developedbymax" rel="noopener" target="_blank">
-              <Github width="17" height="17" />GitHub
-            </a>
           </div>
         </Reveal>
       </div>

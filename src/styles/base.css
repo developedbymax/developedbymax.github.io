@@ -279,26 +279,30 @@ h4 { font-size: 16px; }
   padding: clamp(48px, 6vw, 72px) 0 44px;
   background: var(--ground-2);
 }
-.foot-grid {
-  display: grid; grid-template-columns: 1.5fr 1fr 1.2fr 1fr; gap: 40px;
-  margin-bottom: 46px;
+.foot-top {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: 32px; flex-wrap: wrap; margin-bottom: 40px;
 }
-@media (max-width: 900px) { .foot-grid { grid-template-columns: 1fr 1fr 1fr; gap: 34px; } }
-@media (max-width: 900px) { .foot-grid > div:first-child { grid-column: 1 / -1; } }
-@media (max-width: 620px) { .foot-grid { grid-template-columns: 1fr 1fr; gap: 30px; } }
-@media (max-width: 400px) { .foot-grid { grid-template-columns: 1fr; } }
-.foot-grid .blurb { font-size: 14.5px; max-width: 34ch; margin-top: 16px; }
-.foot-col h4 {
-  font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
-  color: var(--ink-faint); font-weight: 800; margin-bottom: 16px;
+.foot-top .blurb { font-size: 14.5px; max-width: 40ch; margin-top: 16px; }
+
+.foot-mail {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 13px 20px; border-radius: var(--r-md);
+  border: 1px solid var(--line); background: rgba(255,255,255,.035);
+  font-size: 15px; font-weight: 700; letter-spacing: -.01em; color: var(--ink);
+  transition: border-color .25s var(--ease), background .25s var(--ease),
+              transform .25s var(--ease);
 }
-.foot-col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 11px; }
-.foot-col a { font-size: 14.5px; font-weight: 600; color: var(--ink-mute); }
-.foot-col a:hover { color: var(--ink); }
+.foot-mail svg { color: var(--accent); flex: none; }
+.foot-mail:hover {
+  border-color: var(--accent); background: rgba(255,255,255,.07);
+  transform: translateY(-2px);
+}
+@media (max-width: 520px) {
+  .foot-mail { font-size: 13.5px; padding: 12px 16px; }
+}
+
 .foot-base {
-  display: flex; align-items: center; justify-content: space-between;
-  gap: 16px; flex-wrap: wrap;
-  border-top: 1px solid var(--line); padding-top: 26px;
-  font-size: 13px; color: var(--ink-faint);
+  border-top: 1px solid var(--line); padding-top: 24px;
+  margin: 0; font-size: 13px; color: var(--ink-faint);
 }
-.foot-base p { margin: 0; color: inherit; font-size: inherit; }

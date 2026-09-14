@@ -23,7 +23,7 @@ export default function OutrushLegal() {
   return (
     <GameShell game={game} links={NAV} legal>
       <div className="wrap prose">
-        <p className="updated">Last updated &middot; 7 September 2026</p>
+        <p className="updated">Last updated &middot; 14 September 2026</p>
         <h1>Privacy Policy &amp; Terms of Use</h1>
         <p>
           Two documents, kept on one page so there is only one link to follow. The privacy
@@ -167,11 +167,18 @@ export default function OutrushLegal() {
 
           <h3>4. Crash and error reporting</h3>
           <p>
-            If crash reporting is enabled in the build you are running, a crash sends a
-            technical report &mdash; the error, the code path that produced it, the device
-            model and the operating system version &mdash; to <strong>Sentry</strong>, which
-            we use solely to find and fix faults. It is configured not to attach personal
-            information, and it never includes your scores, your name or your purchases.
+            The game includes the <strong>Sentry</strong> crash-reporting SDK, and it is
+            switched off. It stays completely inert unless a reporting address is configured
+            into the build, and no released build has one &mdash; so no crash report has ever
+            been sent.
+          </p>
+          <p>
+            If that changes, a crash would send a technical report &mdash; the error, the code
+            path that produced it, the device model and the operating system version &mdash; to
+            Sentry, which we would use solely to find and fix faults. It is configured not to
+            attach personal information, and it would never include your scores, your name or
+            your purchases. This section and the date at the top of this page will be updated
+            before any build that switches it on is released.
           </p>
 
           <h3>5. What the game does not do</h3>
@@ -264,9 +271,11 @@ export default function OutrushLegal() {
 
           <h3>1. Who may play</h3>
           <p>
-            You must be at least 13 years old, or the minimum age required to hold an account in
-            your country, whichever is higher. If you are under the age of majority where you
-            live, you should read these terms with a parent or guardian.
+            You must be at least 13 years old, or the minimum age your country requires for an
+            App Store or Google Play account, whichever is higher. The game itself has no
+            account and no sign-in &mdash; this is the age the store sets for the account you
+            install it from. If you are under the age of majority where you live, you should
+            read these terms with a parent or guardian.
           </p>
 
           <h3>2. Your licence to use the game</h3>

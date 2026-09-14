@@ -25,7 +25,7 @@ export default function ScrapglowLegal() {
   return (
     <GameShell game={game} links={NAV} legal>
       <div className="wrap prose">
-        <p className="updated">Last updated &middot; 13 September 2026</p>
+        <p className="updated">Last updated &middot; 14 September 2026</p>
         <h1>Privacy Policy &amp; Terms of Use</h1>
         <p>
           Two documents, kept on one page so there is only one link to follow. The privacy
@@ -286,9 +286,11 @@ export default function ScrapglowLegal() {
 
           <h3>1. Who may play</h3>
           <p>
-            You must be at least 13 years old, or the minimum age required to hold an account in
-            your country, whichever is higher. If you are under the age of majority where you
-            live, you should read these terms with a parent or guardian.
+            You must be at least 13 years old, or the minimum age your country requires for an
+            App Store or Google Play account, whichever is higher. The game itself has no
+            account and no sign-in &mdash; this is the age the store sets for the account you
+            install it from. If you are under the age of majority where you live, you should
+            read these terms with a parent or guardian.
           </p>
 
           <h3>2. Your licence to use the game</h3>

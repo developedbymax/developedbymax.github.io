@@ -12,18 +12,25 @@ const NAV = [
   ['Terms', '#terms'],
 ];
 
+/* Structured to match Outrush's page section for section, so the three read as
+   documents from one publisher rather than three drafts. The CONTENT is
+   Huecomb's own: three purchases, stars and themes rather than palettes, the
+   stained-glass windows, and the fact that Remove Ads here also makes the revive
+   and the boosters free — App.js only calls initAds() when noAds is false, so
+   the "never initialised" claim is true for this game. */
 export default function HuecombLegal() {
   useMeta(meta['/huecomb/privacy']);
 
   return (
     <GameShell game={game} links={NAV} legal>
       <div className="wrap prose">
-        <p className="updated">Last updated &middot; 12 September 2026</p>
+        <p className="updated">Last updated &middot; 14 September 2026</p>
         <h1>Privacy Policy &amp; Terms of Use</h1>
         <p>
           Two documents, kept on one page so there is only one link to follow. The privacy
           policy describes what the game does with information; the terms describe the
-          agreement between you and us when you play.
+          agreement between you and us when you play. Both cover <strong>Huecomb</strong>{' '}
+          only &mdash; the other games are separate apps with their own policies.
         </p>
 
         <nav className="doc-nav" aria-label="Documents on this page">
@@ -44,12 +51,18 @@ export default function HuecombLegal() {
               advertising data, collected by our ad partner so it can serve ads &mdash; and if
               you buy <strong>Remove Ads</strong>, that code never even starts.
             </p>
+            <p>Everything below is the same statement in full.</p>
           </div>
 
           <p>
             This policy explains how the mobile game <strong>Huecomb: Hexa Stack Sort</strong>{' '}
             (&ldquo;the game&rdquo;, &ldquo;we&rdquo;) handles information. It covers the iOS and
             Android versions of the game and this website.
+          </p>
+          <p>
+            The game is published by <strong>developed by max</strong>, who is the data
+            controller for the purposes of the UK and EU GDPR. See{' '}
+            <a href="#contact">Contact</a> below to reach us.
           </p>
 
           <h3>1. What the game stores on your device</h3>
@@ -83,13 +96,30 @@ export default function HuecombLegal() {
             <strong>AppLovin MAX</strong>, which may also route ad requests to other advertising
             networks it mediates on our behalf.
           </p>
-          <p>
-            To serve and measure ads, these partners may collect your device&rsquo;s advertising
-            identifier (IDFA on iOS, Advertising ID on Android); device and software details such
-            as model, operating system version, language, screen size and network type; your IP
-            address and the approximate region derived from it; and ad interaction events &mdash;
-            that an ad was requested, shown, watched to the end, or tapped.
-          </p>
+          <p>To serve and measure ads, these partners may collect:</p>
+          <table className="tbl">
+            <thead>
+              <tr><th>What</th><th>Why</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Your device&rsquo;s advertising identifier (IDFA on iOS, Advertising ID on Android)</td>
+                <td>To select ads and to measure whether an ad led to an install, without identifying you by name</td>
+              </tr>
+              <tr>
+                <td>Device and software details &mdash; model, operating system version, language, screen size, network type</td>
+                <td>To send an ad that fits and plays correctly on your device</td>
+              </tr>
+              <tr>
+                <td>IP address, and the approximate country or region derived from it</td>
+                <td>To meet local legal requirements and to serve ads relevant to your region</td>
+              </tr>
+              <tr>
+                <td>Ad interaction events &mdash; that an ad was requested, shown, watched to the end, or tapped</td>
+                <td>To pay for the ad correctly and to detect fraud</td>
+              </tr>
+            </tbody>
+          </table>
           <p>
             We do not receive this data ourselves in a form that identifies you; we see only
             aggregate revenue reporting. AppLovin&rsquo;s own privacy policy governs what they do
@@ -101,7 +131,9 @@ export default function HuecombLegal() {
           <p>
             <strong>If you purchase Remove Ads, the advertising SDK is never initialised.</strong>{' '}
             No ad requests are made and no advertising identifier is read. This is not a setting
-            that hides ads after the fact &mdash; the code simply does not run.
+            that hides ads after the fact &mdash; the code simply does not run. The revive and the
+            boosters you would otherwise watch an ad for become free instead, within their normal
+            per-run limits.
           </p>
 
           <h4>Your choices about advertising</h4>
@@ -139,11 +171,17 @@ export default function HuecombLegal() {
 
           <h3>4. Crash and error reporting</h3>
           <p>
-            If crash reporting is enabled in the build you are running, a crash sends a technical
-            report &mdash; the error, the code path that produced it, the device model and the
-            operating system version &mdash; to <strong>Sentry</strong>, which we use solely to
-            find and fix faults. It is configured not to attach personal information, and it never
-            includes your scores, your name or your purchases.
+            The game includes the <strong>Sentry</strong> crash-reporting SDK, and it is switched
+            off. It stays completely inert unless a reporting address is configured into the build,
+            and no released build has one &mdash; so no crash report has ever been sent.
+          </p>
+          <p>
+            If that changes, a crash would send a technical report &mdash; the error, the code path
+            that produced it, the device model and the operating system version &mdash; to Sentry,
+            which we would use solely to find and fix faults. It is configured not to attach
+            personal information, and it would never include your scores, your name or your
+            purchases. This section and the date at the top of this page will be updated before any
+            build that switches it on is released.
           </p>
 
           <h3>5. What the game does not do</h3>
@@ -152,6 +190,10 @@ export default function HuecombLegal() {
             <li>No access to location, contacts, photos, camera or microphone.</li>
             <li>No gameplay analytics sent anywhere.</li>
             <li>No selling of personal information by us to anyone.</li>
+            <li>
+              No advertising that follows you between the game and other services we run, because
+              there are none.
+            </li>
           </ul>
 
           <h3>6. Children</h3>
@@ -166,8 +208,11 @@ export default function HuecombLegal() {
           <p>
             If you are in the UK, the EEA, or a jurisdiction with comparable law, you have rights to
             access, correct, delete and port your personal data, and to object to how it is
-            processed. These are unusually simple to exercise here, because we hold no personal data
-            about you on any server:
+            processed.
+          </p>
+          <p>
+            These are unusually simple to exercise here. We hold no personal data about you on any
+            server, so:
           </p>
           <ul>
             <li>
@@ -183,11 +228,22 @@ export default function HuecombLegal() {
           <p>
             If you are a California resident: we do not sell your personal information. Personalised
             advertising may count as &ldquo;sharing&rdquo; under California law, and you can opt out
-            using the same controls in section 2. You may also complain to your local data
-            protection authority.
+            using the same controls in section 2.
+          </p>
+          <p>
+            You may also complain to your local data protection authority. In the UK that is the
+            Information Commissioner&rsquo;s Office.
           </p>
 
-          <h3>8. Changes to this policy</h3>
+          <h3>8. Data transfers and retention</h3>
+          <p>
+            We retain no personal data, so there is nothing for us to transfer or to delete on a
+            schedule. Data held by our advertising partner may be processed in countries outside
+            your own, including the United States, under the safeguards described in their own
+            policy.
+          </p>
+
+          <h3>9. Changes to this policy</h3>
           <p>
             If this policy changes in a way that materially affects you, the date at the top of this
             page will change and the updated policy will be published here before the change takes
@@ -209,99 +265,177 @@ export default function HuecombLegal() {
           </div>
 
           <p>
-            These terms are an agreement between you and the publisher of{' '}
-            <strong>Huecomb: Hexa Stack Sort</strong> (&ldquo;the game&rdquo;, &ldquo;we&rdquo;,
-            &ldquo;us&rdquo;) covering the game and this website. By installing or playing the game
-            you accept them.
+            These terms are an agreement between you and <strong>developed by max</strong>{' '}
+            (&ldquo;we&rdquo;, &ldquo;us&rdquo;) covering the mobile game{' '}
+            <strong>Huecomb: Hexa Stack Sort</strong> (&ldquo;the game&rdquo;) and this website. By
+            installing or playing the game you accept them. If you do not accept them, please do not
+            install or play it.
           </p>
 
           <h3>1. Who may play</h3>
           <p>
-            You must be at least 13 years old, or the minimum age required to hold an account in
-            your country, whichever is higher. If you are under the age of majority where you live,
-            you should read these terms with a parent or guardian.
+            You must be at least 13 years old, or the minimum age your country requires for an App
+            Store or Google Play account, whichever is higher. The game itself has no account and no
+            sign-in &mdash; this is the age the store sets for the account you install it from. If
+            you are under the age of majority where you live, you should read these terms with a
+            parent or guardian.
           </p>
 
           <h3>2. Your licence to use the game</h3>
           <p>
             We grant you a personal, non-exclusive, non-transferable, revocable licence to install
-            and play the game on devices you own or control, for your own non-commercial use,
-            subject to these terms and to the rules of the app store you installed from.
+            and play the game on devices you own or control, for your own non-commercial use. That
+            licence is subject to these terms and to the rules of the app store you installed from.
           </p>
           <p>
-            You may not sell, rent, sublicense or redistribute the game; modify, decompile or
-            reverse engineer it, except to the extent that law expressly permits; remove or obscure
+            You may not sell, rent, sublicense or redistribute the game; modify, decompile or reverse
+            engineer it, except to the extent that law expressly permits you to; remove or obscure
             any notice in it; or use it to build a competing product.
           </p>
 
           <h3>3. Fair play</h3>
           <p>
             Please do not use cheats, automation, modified clients or memory editors, or otherwise
-            tamper with the game or its stored data to obtain stars, themes or purchases you have
-            not earned or paid for. We may stop supporting a modified installation, and a tampered
-            save may stop working correctly.
+            tamper with the game or its stored data to obtain stars, themes or purchases you have not
+            earned or paid for. We may stop supporting a modified installation, and a tampered save
+            may stop working correctly.
           </p>
 
           <h3>4. Purchases</h3>
+          <p>The game is free to play. It offers three optional purchases:</p>
+          <ul>
+            <li>
+              <strong>Remove Ads</strong> &mdash; a one-off purchase that permanently stops
+              advertising in the game on that store account, and makes the revive and the boosters
+              free within their normal per-run limits.
+            </li>
+            <li>
+              <strong>Star packs</strong> &mdash; two consumable packs that add stars to your balance.
+            </li>
+          </ul>
           <p>
-            The game is free to play. It offers three optional purchases: <strong>Remove Ads</strong>,
-            a one-off purchase that permanently stops interstitial advertising on that store account
-            and makes the revive and the boosters free within their normal per-run limits; and two
-            consumable <strong>star packs</strong>.
+            All purchases are made through and charged by <strong>Apple&rsquo;s App Store</strong> or{' '}
+            <strong>Google Play</strong>. Prices are shown in your local currency by the store itself
+            and may vary by country and over time. We do not process payments, and we never see your
+            payment details.
           </p>
           <p>
-            Stars are a virtual item with no monetary value, cannot be exchanged for money, and are
-            not transferable between devices or store accounts.{' '}
-            <strong>
-              They live only on the device that earned or bought them, and uninstalling the game
-              destroys them.
-            </strong>{' '}
-            Remove Ads is restorable on the same store account using the Restore button in the shop.
+            <strong>Refunds are handled by the store you bought from</strong>, under its own policy.
+            We cannot issue, reverse or override a store refund. If a purchase is refunded, the thing
+            it bought may be removed from the game.
           </p>
           <p>
-            Everything sold is optional. Nothing sold changes how stacks are dealt, how scoring
-            works, or how the board behaves.
+            Where the law gives you a right to cancel a digital purchase, that right may end once the
+            content is delivered to you, which for these purchases is immediate.
           </p>
-
-          <h3>5. Advertising</h3>
           <p>
-            The free version shows advertising, including full-screen ads between runs and optional
-            ads you choose to watch in exchange for a revive or a booster. We do not control the
-            content of individual ads; concerns about a specific ad can be sent to us and we will
-            pass them on.
-          </p>
-
-          <h3>6. Availability and changes</h3>
-          <p>
-            We may update, change or discontinue the game or any part of it, including the balance
-            of the game and the items offered, at any time. We try not to take away things you have
-            paid for.
+            Everything sold is optional. Nothing sold changes how stacks are dealt, how scoring works,
+            or how the board behaves.
           </p>
 
-          <h3>7. No warranty, and limits on liability</h3>
+          <h3>5. Stars, themes and other in-game items</h3>
           <p>
-            The game is provided &ldquo;as is&rdquo;, without warranties of any kind to the fullest
-            extent the law allows. Nothing in these terms limits liability that cannot lawfully be
-            limited &mdash; including liability for death or personal injury caused by negligence,
-            or for fraud. Subject to that, our total liability to you is limited to the amount you
-            have paid us, through the app stores, in the twelve months before the claim.
+            Stars, unlocked themes, finished windows, scores and progress are{' '}
+            <strong>not property and have no monetary value</strong>. You do not own them; you hold a
+            limited licence to use them inside the game. They cannot be sold, transferred between
+            accounts or devices, or exchanged for money or anything outside the game.
           </p>
+          <p>Two consequences worth stating plainly, because they follow from how the game is built:</p>
+          <ul>
+            <li>
+              <strong>Your progress is stored on your device, not on a server.</strong> If you
+              uninstall the game, reset the device, or lose it, your stars, themes, windows, scores
+              and streak are gone and cannot be recovered by us.
+            </li>
+            <li>
+              <strong>Remove Ads is the exception.</strong> Because it is a non-consumable purchase
+              recorded against your store account, it can be restored on a new device with the{' '}
+              <em>Restore purchases</em> button in the game&rsquo;s Shop.
+            </li>
+          </ul>
           <p>
-            If you are a consumer, you keep all the rights your local consumer law gives you, and
-            nothing here overrides them.
+            We may change the cost of a theme, the rate at which stars are awarded, or the balance of
+            the game, as part of normal updates.
           </p>
 
-          <h3>8. Ending these terms</h3>
+          <h3>6. Advertising</h3>
           <p>
-            You may end this agreement at any time by uninstalling the game. We may end it if you
-            materially breach these terms.
+            Unless you have purchased Remove Ads, the game displays advertising, including a
+            full-screen ad between some runs and optional ads you may choose to watch in exchange for
+            a revive or a booster. Advertising is supplied by third parties; we do not control which
+            specific ads are shown and are not responsible for their content or for anything you buy
+            from an advertiser. What advertising partners collect is described in the{' '}
+            <a href="#privacy">Privacy Policy</a> above.
+          </p>
+
+          <h3>7. Ownership</h3>
+          <p>
+            The game, its name, artwork, sounds, code and this website belong to us or our licensors
+            and are protected by copyright and other laws. These terms give you no rights in them
+            beyond the licence in section 2.
+          </p>
+          <p>
+            You are welcome to record, stream and share footage of yourself playing the game,
+            including on monetised channels, provided you do not present it as your own work and do
+            not use our name in a way that implies we endorse you.
+          </p>
+
+          <h3>8. Availability and changes</h3>
+          <p>
+            We may update, change or discontinue the game or any part of it, including the balance of
+            the game and the items offered, and we may stop supporting older operating system
+            versions. We try not to break things, and we try not to take away things you have paid
+            for, but we do not promise the game will always be available, uninterrupted or
+            error-free.
+          </p>
+
+          <h3>9. No warranty</h3>
+          <p>
+            To the fullest extent the law allows, the game is provided &ldquo;as is&rdquo; and
+            &ldquo;as available&rdquo;, without warranties of any kind, whether express or implied,
+            including any implied warranty of merchantability, fitness for a particular purpose or
+            non-infringement.
+          </p>
+          <p>
+            Nothing in these terms excludes or limits any right you have under mandatory consumer
+            protection law in your country, including your statutory rights in the UK, the EU and
+            elsewhere. Where those rights apply, they apply regardless of anything in this section.
+          </p>
+
+          <h3>10. Limitation of liability</h3>
+          <p>
+            To the fullest extent the law allows, we are not liable for indirect, incidental, special
+            or consequential loss, for lost data or lost progress, or for loss of profit or goodwill,
+            arising from your use of the game.
+          </p>
+          <p>
+            Where liability cannot be excluded, our total liability to you is limited to the greater
+            of the amount you paid us for the game in the twelve months before the claim, or ten US
+            dollars. We do not exclude liability for death or personal injury caused by our
+            negligence, for fraud, or for anything else that cannot lawfully be excluded.
+          </p>
+
+          <h3>11. Ending this agreement</h3>
+          <p>
+            You can end it at any time by uninstalling the game. We may suspend or end your licence if
+            you materially breach these terms, in particular section 3. Sections 5, 7, 9 and 10
+            continue to apply afterwards.
+          </p>
+
+          <h3>12. Changes to these terms</h3>
+          <p>
+            If these terms change materially, the date at the top of this page will change and the new
+            version will be published here before it takes effect in a new version of the game.
+            Continuing to play after that means you accept the change.
           </p>
         </section>
 
         {/* ================================================================ */}
         <section className="doc" id="contact" aria-labelledby="contact-h">
           <h2 id="contact-h">Contact</h2>
-          <p>Questions about either document, or about the game:</p>
+          <p>
+            Questions about either document above, a privacy request, or anything else about the game:
+          </p>
           <p>
             <a className="contact-mail" href="mailto:developedbymax@gmail.com">
               developedbymax@gmail.com

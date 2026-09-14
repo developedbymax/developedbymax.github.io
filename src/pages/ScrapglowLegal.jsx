@@ -73,9 +73,15 @@ export default function ScrapglowLegal() {
 
           <h3>1. What the game stores on your device</h3>
           <p>
-            The game keeps two small records on your phone. Nothing in them is transmitted to
-            us, because there is nowhere for them to be transmitted to &mdash; the game has no
-            backend server and makes no network requests of its own.
+            The game keeps two small records on your phone. Nothing in them is transmitted to us:
+            Scrapglow has no backend server of its own, and none of it is uploaded anywhere.
+          </p>
+          <p>
+            The game does make one request of its own. On launch it asks Expo&rsquo;s update
+            service whether a newer version of Scrapglow has been published. That request says
+            which platform and which version of the game is running, and nothing else &mdash;
+            no identifier, nothing about you, and nothing about how you play. If it fails, or
+            you are offline, the game starts normally on the version it already has.
           </p>
           <ul>
             <li>Your best score, your best single haul, your lifetime total banked, and how many runs you have finished</li>

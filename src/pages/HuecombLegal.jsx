@@ -67,9 +67,15 @@ export default function HuecombLegal() {
 
           <h3>1. What the game stores on your device</h3>
           <p>
-            The game keeps a small database on your phone. Nothing in it is transmitted to us,
-            because there is nowhere for it to be transmitted to &mdash; the game has no backend
-            server and makes no network requests of its own.
+            The game keeps a small database on your phone. Nothing in it is transmitted to us:
+            Huecomb has no backend server of its own, and none of it is uploaded anywhere.
+          </p>
+          <p>
+            The game does make one request of its own. On launch it asks Expo&rsquo;s update
+            service whether a newer version of Huecomb has been published. That request says
+            which platform and which version of the game is running, and nothing else &mdash;
+            no identifier, nothing about you, and nothing about how you play. If it fails, or
+            you are offline, the game starts normally on the version it already has.
           </p>
           <ul>
             <li>Your best score and your last few runs</li>

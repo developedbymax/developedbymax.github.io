@@ -7,7 +7,7 @@ import GameArt from './art/GameArt.jsx';
 /* The second light in the ambient field behind a game page — a colour the game
    actually uses, so the page glows in its own two colours rather than in the
    studio's. */
-const SPOT = { outrush: '#B57BFF', huecomb: '#A66CFF', scrapglow: '#FB9C89' };
+const SPOT = { outrush: '#B57BFF', huecomb: '#A66CFF', scrapglow: '#FB9C89', starshell: '#FF8AE2' };
 
 export function GameHeader({ game, links = [] }) {
   const stuck = useStuck();

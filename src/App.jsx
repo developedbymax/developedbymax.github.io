@@ -7,6 +7,8 @@ import Huecomb from './pages/Huecomb.jsx';
 import HuecombLegal from './pages/HuecombLegal.jsx';
 import Scrapglow from './pages/Scrapglow.jsx';
 import ScrapglowLegal from './pages/ScrapglowLegal.jsx';
+import Starshell from './pages/Starshell.jsx';
+import StarshellLegal from './pages/StarshellLegal.jsx';
 import NotFound from './pages/NotFound.jsx';
 
 import './styles/base.css';
@@ -30,6 +32,10 @@ export default function App() {
         <Route path="/scrapglow" element={<Scrapglow />} />
         <Route path="/scrapglow/privacy" element={<ScrapglowLegal />} />
 
+        <Route path="/starshell" element={<Starshell />} />
+        <Route path="/starshell/privacy" element={<StarshellLegal />} />
+        <Route path="/starshell/terms" element={<StarshellLegal focus="terms" />} />
+
         {/* The .html spelling of each game's legal page. Outrush's privacy URL is
             baked into the shipped app and into two store listings, so that one has
             to keep resolving; the others follow the same pattern so the
@@ -40,6 +46,8 @@ export default function App() {
         <Route path="/huecomb/index.html" element={<Huecomb />} />
         <Route path="/huecomb/privacy.html" element={<HuecombLegal />} />
         <Route path="/scrapglow/privacy.html" element={<ScrapglowLegal />} />
+        <Route path="/starshell/privacy.html" element={<StarshellLegal />} />
+        <Route path="/starshell/terms.html" element={<StarshellLegal focus="terms" />} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>

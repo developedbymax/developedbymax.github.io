@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { games, statusLabel, TOTAL_PLANNED } from '../data/games.js';
+import { games, statusLabel, TOTAL_PLANNED, BUILT, TO_GO, spell } from '../data/games.js';
 import { SiteHeader, SiteFooter, EMAIL } from '../components/Layout.jsx';
 import { Arrow, Mail, Shield, Spark } from '../components/Icons.jsx';
 import Reveal from '../components/Reveal.jsx';
@@ -65,8 +65,10 @@ function Stage() {
   );
 }
 
+const cap = (w) => w[0].toUpperCase() + w.slice(1);
+
 function Hero() {
-  const built = games.length;
+  const built = BUILT;
   return (
     <section className="hero">
       <div className="wrap hero-grid">
@@ -79,7 +81,7 @@ function Hero() {
           <p className="lede">
             I&rsquo;m Max. I make tiny, tactile puzzle games for phones &mdash; the kind you
             finish a run of while the kettle boils. No accounts, no servers, nothing
-            following you around. Three are built. Seven to go.
+            following you around. {cap(spell(BUILT))} are built. {cap(spell(TO_GO))} to go.
           </p>
 
           <div className="cta-row">
@@ -207,19 +209,17 @@ function GameCard({ game }) {
   );
 }
 
-/* Seven slots that are genuinely empty. They are numbered and labelled rather
+/* The slots that are genuinely empty. They are numbered and labelled rather
    than filled with invented titles, because a visitor works out the difference
    in about a second and the invented version costs all the credit the real
-   games just earned. */
-const SLOTS = [
-  { n: 4, cap: 'Next up', txt: 'In design. Not ready to be named yet.' },
-  { n: 5, cap: 'Planned', txt: 'Not announced.' },
-  { n: 6, cap: 'Planned', txt: 'Not announced.' },
-  { n: 7, cap: 'Planned', txt: 'Not announced.' },
-  { n: 8, cap: 'Planned', txt: 'Not announced.' },
-  { n: 9, cap: 'Planned', txt: 'Not announced.' },
-  { n: 10, cap: 'Open', txt: 'Got an idea you would actually play?', mail: true },
-];
+   games just earned. They count up from the last real game, so adding a game
+   to src/data/games.js takes a slot away on its own. */
+const SLOTS = Array.from({ length: TO_GO }, (_, i) => {
+  const n = BUILT + 1 + i;
+  if (n === TOTAL_PLANNED) return { n, cap: 'Open', txt: 'Got an idea you would actually play?', mail: true };
+  if (i === 0) return { n, cap: 'Next up', txt: 'In design. Not ready to be named yet.' };
+  return { n, cap: 'Planned', txt: 'Not announced.' };
+});
 
 function Slot({ s }) {
   const body = (
@@ -247,7 +247,7 @@ function Games() {
         <Reveal className="section-head">
           <div>
             <p className="eyebrow">The shelf</p>
-            <h2>Three built, seven still to come</h2>
+            <h2>{cap(spell(BUILT))} built, {spell(TO_GO)} still to come</h2>
             <p>
               Each one is designed, coded, drawn, scored and shipped by me. Tap a card to
               read what a game actually is before you spend a download on it.
@@ -289,7 +289,7 @@ const PRINCIPLES = [
   {
     Ic: Spark,
     h: 'One purchase, not a treadmill.',
-    p: 'Free with ads, and a one-off purchase removes them for good — buy it and the ad code is never started at all. No energy timers, no loot boxes, nothing that costs more the longer you play.',
+    p: 'Free with ads, and a one-off purchase ends the ones you did not ask for, for good. No energy timers, no loot boxes, nothing that costs more the longer you play.',
   },
 ];
 

@@ -5,7 +5,8 @@
 
    Colours are not approximations: they are the values the apps actually render.
    Outrush's come from OutrushRN/src/ui/theme.js, Huecomb's from
-   HuecombRN/src/ui/theme.js, Scrapglow's from ScrapglowRN/src/game/Scene.js. */
+   HuecombRN/src/ui/theme.js, Scrapglow's from ScrapglowRN/src/game/Scene.js,
+   Starshell's from StarshellRN/src/ui/theme.js. */
 
 export const games = [
   {
@@ -101,15 +102,53 @@ export const games = [
     ],
     hasLegal: true,
   },
+  {
+    slug: 'starshell',
+    name: 'Starshell',
+    subtitle: 'The order is the whole game',
+    genre: 'Ordering puzzle',
+    year: '2026',
+    status: 'soon',
+    featured: false,
+    art: 'starshell',
+    tagline: 'Five stars. One best order.',
+    blurb:
+      'Pack a firework shell with stars and launch it. It fires bottom to top, and every star changes what happens above it — so five stars is a hundred and twenty orderings, and exactly one of them is best.',
+    short: 'It fires bottom to top. Every star changes the one above.',
+    theme: {
+      ground: '#0A0A18',
+      surface: '#14142A',
+      line: '#2B2B4D',
+      accent: '#FFD166',
+      onAccent: '#241A00',
+      ink: '#EEF0FF',
+      inkMute: '#8B8FB5',
+      inkFaint: '#5A5E80',
+    },
+    facts: [
+      ['120', 'Ways to pack five stars'],
+      ['22', 'Stars that change each other'],
+      ['14', 'Nights in a festival'],
+      ['1', 'Daily bench, the same for all'],
+    ],
+    hasLegal: true,
+  },
 ];
 
 export const bySlug = (slug) => games.find((g) => g.slug === slug);
 
-/* Nine slots sit under the featured card. Two are finished games; the rest are
-   deliberately empty and numbered, because "seven still to make" is the actual
-   state of things and a grid that pretends otherwise would be a lie the visitor
-   catches immediately. */
+/* Nine slots sit under the featured card: every game after the first, then the
+   rest deliberately empty and numbered, because "six still to make" is the
+   actual state of things and a grid that pretends otherwise would be a lie the
+   visitor catches immediately. */
 export const TOTAL_PLANNED = 10;
+
+/* "Four built, six to go" is said in three places, and it has to change every
+   time a game is added. Spelled from the list, so it cannot fall behind. */
+const WORDS = ['none', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
+export const spell = (n) => WORDS[n] ?? String(n);
+export const BUILT = games.length;
+export const TO_GO = TOTAL_PLANNED - games.length;
 
 export const statusLabel = {
   live: 'Out now',

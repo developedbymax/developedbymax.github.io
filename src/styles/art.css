@@ -176,3 +176,34 @@
   0%, 100% { transform: translate(0, 0); }
   50%      { transform: translate(-5%, 4%); }
 }
+
+/* ============================ Starshell ============================
+   One 5.6s cycle: the rows light bottom to top, the fuse rises, the shell
+   opens, and the burst fades. Every resting state is the finished picture —
+   burst open, fuse drawn, rows unlit — so reduced motion loses nothing. */
+.ss { width: 100%; height: auto; filter: drop-shadow(0 22px 40px rgba(0,0,0,.6)); }
+.ss text { font-family: inherit; }
+.ss-lit { opacity: 0; }
+@media (prefers-reduced-motion: no-preference) {
+  .ss-lit   { animation: ss-fire 5.6s linear infinite; animation-delay: calc(var(--f) * .2s + .12s); }
+  .ss-fuse  { animation: ss-rise 5.6s ease-out infinite; }
+  .ss-burst { animation: ss-bloom 5.6s cubic-bezier(.2,.7,.3,1) infinite; }
+}
+@keyframes ss-fire {
+  0%        { opacity: 0; }
+  1.5%, 5%  { opacity: 1; }
+  10%, 100% { opacity: 0; }
+}
+@keyframes ss-rise {
+  0%, 19%   { stroke-dashoffset: 26; opacity: 0; }
+  20%       { stroke-dashoffset: 26; opacity: 1; }
+  26%       { stroke-dashoffset: 0;  opacity: 1; }
+  31%, 100% { stroke-dashoffset: 0;  opacity: 0; }
+}
+@keyframes ss-bloom {
+  0%, 25%   { opacity: 0; transform: scale(.12); }
+  29%       { opacity: 1; transform: scale(.78); }
+  42%       { opacity: 1; transform: scale(1); }
+  68%       { opacity: .95; transform: scale(1.03); }
+  86%, 100% { opacity: 0; transform: scale(1.07); }
+}

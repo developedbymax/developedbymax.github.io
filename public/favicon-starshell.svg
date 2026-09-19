@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0B0B20"/><stop offset="1" stop-color="#2A1E47"/></linearGradient></defs>
+  <rect width="32" height="32" rx="9" fill="url(#g)"/>
+  <circle cx="16" cy="13.5" r="4.2" fill="#FFD166" opacity=".35"/>
+  <circle cx="16" cy="13.5" r="1.8" fill="#FFE3A0"/>
+  <circle cx="23.42" cy="13.78" r="1.25" fill="#FFD166"/>
+  <circle cx="21.13" cy="16.20" r="1.25" fill="#FFD166"/>
+  <circle cx="20.10" cy="18.88" r="1.25" fill="#FFD166"/>
+  <circle cx="18.69" cy="18.72" r="1.25" fill="#FFD166"/>
+  <circle cx="16.15" cy="20.33" r="1.25" fill="#FFD166"/>
+  <circle cx="13.57" cy="18.18" r="1.25" fill="#FFD166"/>
+  <circle cx="11.69" cy="18.08" r="1.25" fill="#FFD166"/>
+  <circle cx="9.96" cy="16.03" r="1.25" fill="#FFD166"/>
+  <circle cx="8.90" cy="12.54" r="1.25" fill="#FFD166"/>
+  <circle cx="8.97" cy="11.31" r="1.25" fill="#FFD166"/>
+  <circle cx="10.56" cy="8.61" r="1.25" fill="#FFD166"/>
+  <circle cx="13.53" cy="8.50" r="1.25" fill="#FFD166"/>
+  <circle cx="16.24" cy="6.33" r="1.25" fill="#FFD166"/>
+  <circle cx="17.71" cy="6.98" r="1.25" fill="#FFD166"/>
+  <circle cx="20.88" cy="7.27" r="1.25" fill="#FFD166"/>
+  <circle cx="21.73" cy="11.67" r="1.25" fill="#FFD166"/>
+  <line x1="16" y1="28" x2="16" y2="23.4" stroke="#FF8F5E" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

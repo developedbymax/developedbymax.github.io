@@ -174,7 +174,7 @@ export default function ScrapglowLegal() {
             <li>
               <strong>In the EEA and the UK</strong>, a consent dialog appears before any
               advertising code starts, and your answer is recorded. You can reopen it at any
-              time from <em>Privacy choices</em> in the game&rsquo;s shop.
+              time from <em>Ad privacy choices</em> in the game&rsquo;s shop.
             </li>
             <li>
               <strong>On Android</strong>, you can reset or delete your Advertising ID in{' '}

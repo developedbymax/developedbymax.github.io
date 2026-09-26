@@ -207,3 +207,15 @@
   68%       { opacity: .95; transform: scale(1.03); }
   86%, 100% { opacity: 0; transform: scale(1.07); }
 }
+
+/* ============================ Pearlbound ============================
+   The preview breathes the way it does while the player is aiming, and the
+   pearl's halo pulses. At rest it is the aimed chamber, so reduced motion
+   loses nothing. */
+.pb { width: 100%; height: auto; filter: drop-shadow(0 22px 40px rgba(0,0,0,.6)); }
+@media (prefers-reduced-motion: no-preference) {
+  .pb-trail { animation: pb-aim 3.2s ease-in-out infinite; }
+  .pb-glow  { animation: pb-glow 3.2s ease-in-out infinite; transform-origin: 100px 173px; }
+}
+@keyframes pb-aim  { 0%, 100% { opacity: .45; } 50% { opacity: 1; } }
+@keyframes pb-glow { 0%, 100% { opacity: .06; transform: scale(1); } 50% { opacity: .16; transform: scale(1.35); } }

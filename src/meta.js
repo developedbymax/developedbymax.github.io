@@ -86,6 +86,28 @@ export const meta = {
     favicon: '/favicon-starshell.svg',
   },
 
+  '/pearlbound': {
+    title: 'Pearlbound — a ricochet treasure dive for iOS and Android',
+    description:
+      'Pull back, let one pearl go, and watch it ricochet through a reef of coral and gold. Break the seals, then bank your treasure or dive deeper. Free, offline, no account, no last chamber.',
+    themeColor: '#211D35',
+    favicon: '/favicon-pearlbound.svg',
+  },
+  '/pearlbound/privacy': {
+    title: 'Privacy Policy & Terms of Use — Pearlbound',
+    description:
+      'What Pearlbound stores on your device, what its advertising partner collects, what Remove break ads does and does not stop, and the terms you agree to when you play.',
+    themeColor: '#211D35',
+    favicon: '/favicon-pearlbound.svg',
+  },
+  '/pearlbound/terms': {
+    title: 'Terms of Use & Privacy Policy — Pearlbound',
+    description:
+      'The terms you agree to when you play Pearlbound, on the same page as its privacy policy: the one purchase, the optional rescue ad, and what happens to your treasure.',
+    themeColor: '#211D35',
+    favicon: '/favicon-pearlbound.svg',
+  },
+
   '/404': {
     title: 'Page not found — developed by max',
     description: 'That page does not exist. The games are all on the front page.',
@@ -110,13 +132,16 @@ export const meta = {
 
    Starshell also has a terms address of its own, /starshell/terms(.html),
    because that is the URL its store copy and release runbook were written with.
-   It renders the same page and opens it at the terms. */
+   It renders the same page and opens it at the terms. Pearlbound follows it:
+   its app passes AppLovin a separate terms URL, /pearlbound/terms. */
 export const ALIASES = {
   '/outrush/privacy.html': '/outrush/privacy',
   '/huecomb/privacy.html': '/huecomb/privacy',
   '/scrapglow/privacy.html': '/scrapglow/privacy',
   '/starshell/privacy.html': '/starshell/privacy',
   '/starshell/terms.html': '/starshell/terms',
+  '/pearlbound/privacy.html': '/pearlbound/privacy',
+  '/pearlbound/terms.html': '/pearlbound/terms',
 };
 
 export const ROUTES = [
@@ -125,4 +150,5 @@ export const ROUTES = [
   '/huecomb', '/huecomb/privacy',
   '/scrapglow', '/scrapglow/privacy',
   '/starshell', '/starshell/privacy', '/starshell/terms',
+  '/pearlbound', '/pearlbound/privacy', '/pearlbound/terms',
 ];

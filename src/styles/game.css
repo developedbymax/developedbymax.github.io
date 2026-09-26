@@ -185,8 +185,8 @@
 .fam-foot b { color: var(--ink); }
 
 /* a star's mark standing in for the coloured chip */
-.kind .sq.ss-sq { background: color-mix(in srgb, var(--ink) 6%, transparent); border: 1px solid var(--line); }
-.kind .sq.ss-sq::after { display: none; }
+.kind .sq.ss-sq, .kind .sq.pb-sq { background: color-mix(in srgb, var(--ink) 6%, transparent); border: 1px solid var(--line); }
+.kind .sq.ss-sq::after, .kind .sq.pb-sq::after { display: none; }
 
 /* ---------- the other games, at the foot of a game page ---------- */
 /* one card per other game — three of them now, so three across */

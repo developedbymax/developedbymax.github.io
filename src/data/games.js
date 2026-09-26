@@ -6,7 +6,8 @@
    Colours are not approximations: they are the values the apps actually render.
    Outrush's come from OutrushRN/src/ui/theme.js, Huecomb's from
    HuecombRN/src/ui/theme.js, Scrapglow's from ScrapglowRN/src/game/Scene.js,
-   Starshell's from StarshellRN/src/ui/theme.js. */
+   Starshell's from StarshellRN/src/ui/theme.js, Pearlbound's from
+   PearlboundRN/src/game/Scene.tsx. */
 
 export const games = [
   {
@@ -130,6 +131,37 @@ export const games = [
       ['22', 'Stars that change each other'],
       ['14', 'Nights in a festival'],
       ['1', 'Daily bench, the same for all'],
+    ],
+    hasLegal: true,
+  },
+  {
+    slug: 'pearlbound',
+    name: 'Pearlbound',
+    subtitle: 'A ricochet dive',
+    genre: 'Ricochet roguelite',
+    year: '2026',
+    status: 'soon',
+    featured: false,
+    art: 'pearlbound',
+    tagline: 'One shot. A whole reef of treasure.',
+    blurb:
+      'Pull back, let one pearl go, and watch it ricochet through a chamber of coral and treasure. Break the ivory seals to open the way down — then surface with everything you carry, or dive one chamber deeper and risk it.',
+    short: 'Bank the treasure, or dive one chamber deeper.',
+    theme: {
+      ground: '#211D35',
+      surface: '#2C2740',
+      line: '#3E3558',
+      accent: '#F2BD63',
+      onAccent: '#211D35',
+      ink: '#FFF1D6',
+      inkMute: '#B9ADC6',
+      inkFaint: '#7A6E8C',
+    },
+    facts: [
+      ['3', 'Hull, and the dive is over'],
+      ['6', 'Gifts that change a dive'],
+      ['2', 'Passages after every chamber'],
+      ['∞', 'No last chamber'],
     ],
     hasLegal: true,
   },

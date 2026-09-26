@@ -9,6 +9,8 @@ import Scrapglow from './pages/Scrapglow.jsx';
 import ScrapglowLegal from './pages/ScrapglowLegal.jsx';
 import Starshell from './pages/Starshell.jsx';
 import StarshellLegal from './pages/StarshellLegal.jsx';
+import Pearlbound from './pages/Pearlbound.jsx';
+import PearlboundLegal from './pages/PearlboundLegal.jsx';
 import NotFound from './pages/NotFound.jsx';
 
 import './styles/base.css';
@@ -36,6 +38,10 @@ export default function App() {
         <Route path="/starshell/privacy" element={<StarshellLegal />} />
         <Route path="/starshell/terms" element={<StarshellLegal focus="terms" />} />
 
+        <Route path="/pearlbound" element={<Pearlbound />} />
+        <Route path="/pearlbound/privacy" element={<PearlboundLegal />} />
+        <Route path="/pearlbound/terms" element={<PearlboundLegal focus="terms" />} />
+
         {/* The .html spelling of each game's legal page. Outrush's privacy URL is
             baked into the shipped app and into two store listings, so that one has
             to keep resolving; the others follow the same pattern so the
@@ -48,6 +54,8 @@ export default function App() {
         <Route path="/scrapglow/privacy.html" element={<ScrapglowLegal />} />
         <Route path="/starshell/privacy.html" element={<StarshellLegal />} />
         <Route path="/starshell/terms.html" element={<StarshellLegal focus="terms" />} />
+        <Route path="/pearlbound/privacy.html" element={<PearlboundLegal />} />
+        <Route path="/pearlbound/terms.html" element={<PearlboundLegal focus="terms" />} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>

@@ -2,6 +2,7 @@ import OutrushBoard from './OutrushBoard.jsx';
 import HuecombComb from './HuecombComb.jsx';
 import ScrapglowArena from './ScrapglowArena.jsx';
 import StarshellShell from './StarshellShell.jsx';
+import PearlboundReef from './PearlboundReef.jsx';
 
 /* One entry point for a game's artwork at four sizes, so the home grid, the
    phone screens and the game heroes never drift apart. */
@@ -10,6 +11,7 @@ const SIZES = {
   huecomb:   { micro: 8,  thumb: 21,  phone: 25,  card: 30,  hero: 'clamp(30px, 5.2vw, 48px)' },
   scrapglow: { micro: 58, thumb: 152, phone: 200, card: 250, hero: 'clamp(260px, 32vw, 400px)' },
   starshell: { micro: 58, thumb: 112, phone: 176, card: 230, hero: 'clamp(250px, 29vw, 350px)' },
+  pearlbound: { micro: 58, thumb: 132, phone: 190, card: 240, hero: 'clamp(260px, 31vw, 390px)' },
 };
 
 const BARE = new Set(['micro', 'thumb']);   // no score pop, no tray
@@ -23,5 +25,7 @@ export default function GameArt({ slug, size = 'card', ...rest }) {
   /* at micro size the shell is unreadable, so it is the burst on its own —
      which is also the app icon */
   if (slug === 'starshell') return <StarshellShell size={s} mark={size === 'micro'} {...rest} />;
+  /* the pearl in its shell, the app icon, where the reef would be specks */
+  if (slug === 'pearlbound') return <PearlboundReef size={s} mark={size === 'micro'} {...rest} />;
   return null;
 }

@@ -7,7 +7,8 @@
    Outrush's come from OutrushRN/src/ui/theme.js, Huecomb's from
    HuecombRN/src/ui/theme.js, Scrapglow's from ScrapglowRN/src/game/Scene.js,
    Starshell's from StarshellRN/src/ui/theme.js, Pearlbound's from
-   PearlboundRN/src/game/Scene.tsx. */
+   PearlboundRN/src/game/Scene.tsx, Cinderwake's from
+   CinderwakeRN/src/game/Scene.js and App.js. */
 
 export const games = [
   {
@@ -162,6 +163,37 @@ export const games = [
       ['6', 'Gifts that change a dive'],
       ['2', 'Passages after every chamber'],
       ['∞', 'No last chamber'],
+    ],
+    hasLegal: true,
+  },
+  {
+    slug: 'cinderwake',
+    name: 'Cinderwake',
+    subtitle: 'Wrecking Ball Salvage',
+    genre: 'Momentum demolition',
+    year: '2026',
+    status: 'soon',
+    featured: false,
+    art: 'cinderwake',
+    tagline: 'Swing wide. Break the whole row.',
+    blurb:
+      'Steer a little salvage skiff with one thumb and let the wrecking ball on its tether do the damage. Curve your path to wind up the swing, smash through ceramic ruins to the glowing cores, and scoop up the salvage before you slip out through the gate.',
+    short: 'Curve your path and the ball takes the whole row.',
+    theme: {
+      ground: '#191522',
+      surface: '#241F2D',
+      line: '#3A303F',
+      accent: '#FF9B54',
+      onAccent: '#29202A',
+      ink: '#E8DCC6',
+      inkMute: '#A89CAC',
+      inkFaint: '#6D5969',
+    },
+    facts: [
+      ['1', 'Thumb, anywhere on the yard'],
+      ['4', 'Armor, and the run is over'],
+      ['5', 'Upgrades, stacking to III'],
+      ['∞', 'No last district'],
     ],
     hasLegal: true,
   },

@@ -108,6 +108,28 @@ export const meta = {
     favicon: '/favicon-pearlbound.svg',
   },
 
+  '/cinderwake': {
+    title: 'Cinderwake — a one-thumb demolition game for iOS and Android',
+    description:
+      'Steer a salvage skiff with one thumb and swing a wrecking ball through ceramic ruins. Break the glowing cores, grab the salvage, and bank it or go deeper. Endless, free, and it plays offline.',
+    themeColor: '#191522',
+    favicon: '/favicon-cinderwake.svg',
+  },
+  '/cinderwake/privacy': {
+    title: 'Privacy Policy & Terms of Use — Cinderwake',
+    description:
+      'What Cinderwake stores on your device, what its advertising partner collects, what Remove break ads does and does not stop, and the terms you agree to when you play.',
+    themeColor: '#191522',
+    favicon: '/favicon-cinderwake.svg',
+  },
+  '/cinderwake/terms': {
+    title: 'Terms of Use & Privacy Policy — Cinderwake',
+    description:
+      'The terms you agree to when you play Cinderwake, on the same page as its privacy policy: the one purchase, the optional repair ad, and what happens to your salvage.',
+    themeColor: '#191522',
+    favicon: '/favicon-cinderwake.svg',
+  },
+
   '/404': {
     title: 'Page not found — developed by max',
     description: 'That page does not exist. The games are all on the front page.',
@@ -133,7 +155,8 @@ export const meta = {
    Starshell also has a terms address of its own, /starshell/terms(.html),
    because that is the URL its store copy and release runbook were written with.
    It renders the same page and opens it at the terms. Pearlbound follows it:
-   its app passes AppLovin a separate terms URL, /pearlbound/terms. */
+   its app passes AppLovin a separate terms URL, /pearlbound/terms, and so does
+   Cinderwake's, /cinderwake/terms. */
 export const ALIASES = {
   '/outrush/privacy.html': '/outrush/privacy',
   '/huecomb/privacy.html': '/huecomb/privacy',
@@ -142,6 +165,8 @@ export const ALIASES = {
   '/starshell/terms.html': '/starshell/terms',
   '/pearlbound/privacy.html': '/pearlbound/privacy',
   '/pearlbound/terms.html': '/pearlbound/terms',
+  '/cinderwake/privacy.html': '/cinderwake/privacy',
+  '/cinderwake/terms.html': '/cinderwake/terms',
 };
 
 export const ROUTES = [
@@ -151,4 +176,5 @@ export const ROUTES = [
   '/scrapglow', '/scrapglow/privacy',
   '/starshell', '/starshell/privacy', '/starshell/terms',
   '/pearlbound', '/pearlbound/privacy', '/pearlbound/terms',
+  '/cinderwake', '/cinderwake/privacy', '/cinderwake/terms',
 ];

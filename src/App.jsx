@@ -11,6 +11,8 @@ import Starshell from './pages/Starshell.jsx';
 import StarshellLegal from './pages/StarshellLegal.jsx';
 import Pearlbound from './pages/Pearlbound.jsx';
 import PearlboundLegal from './pages/PearlboundLegal.jsx';
+import Cinderwake from './pages/Cinderwake.jsx';
+import CinderwakeLegal from './pages/CinderwakeLegal.jsx';
 import NotFound from './pages/NotFound.jsx';
 
 import './styles/base.css';
@@ -42,6 +44,10 @@ export default function App() {
         <Route path="/pearlbound/privacy" element={<PearlboundLegal />} />
         <Route path="/pearlbound/terms" element={<PearlboundLegal focus="terms" />} />
 
+        <Route path="/cinderwake" element={<Cinderwake />} />
+        <Route path="/cinderwake/privacy" element={<CinderwakeLegal />} />
+        <Route path="/cinderwake/terms" element={<CinderwakeLegal focus="terms" />} />
+
         {/* The .html spelling of each game's legal page. Outrush's privacy URL is
             baked into the shipped app and into two store listings, so that one has
             to keep resolving; the others follow the same pattern so the
@@ -56,6 +62,8 @@ export default function App() {
         <Route path="/starshell/terms.html" element={<StarshellLegal focus="terms" />} />
         <Route path="/pearlbound/privacy.html" element={<PearlboundLegal />} />
         <Route path="/pearlbound/terms.html" element={<PearlboundLegal focus="terms" />} />
+        <Route path="/cinderwake/privacy.html" element={<CinderwakeLegal />} />
+        <Route path="/cinderwake/terms.html" element={<CinderwakeLegal focus="terms" />} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>

@@ -169,7 +169,7 @@ export const games = [
   {
     slug: 'cinderwake',
     name: 'Cinderwake',
-    subtitle: 'Wrecking Ball Salvage',
+    subtitle: 'Wrecking Ball',
     genre: 'Momentum demolition',
     year: '2026',
     status: 'soon',

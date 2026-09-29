@@ -147,22 +147,21 @@ export default function LeadlightLegal({ focus }) {
             The game is free and is funded by advertising. Ads are served through{' '}
             <strong>Google AdMob</strong>. Google may fill an ad slot with its own advertisers
             or with other advertising companies that buy ad space through Google&rsquo;s
-            platform. No other ad network is built into the game. Ads appear in only these places:
+            platform. No other ad network is built into the game. It has two kinds of ad, and
+            neither is ever shown during the tutorial:
           </p>
           <ul>
             <li>
-              <strong>A break ad</strong>, considered only once a run has ended &mdash; not after every run, never soon after the last one, never after a very short run, and never after the daily window. Never while a window is being
-              played, and never between one window and the next.
+              <strong>A break ad</strong>, which may be shown once a run has ended.
             </li>
             <li>
-              <strong>A mend</strong>, which you choose to watch, to mend one crack and carry on in the same window. The game limits how often it is offered, and never offers it on the daily window.
+              <strong>A mend</strong>, which you choose to watch, to mend one crack and carry on in
+              the same window.
             </li>
           </ul>
           <p>
             The mend is never shown unless you ask for it, and a cancelled or failed ad gives
-            nothing and costs nothing. The advertising code &mdash; and with it the questions
-            below &mdash; starts only after you have finished your first run, so it never
-            interrupts the first thing Leadlight shows you.
+            nothing and costs nothing.
           </p>
           <p>To serve and measure ads, Google and those advertisers may collect:</p>
           <table className="tbl">
@@ -205,14 +204,12 @@ export default function LeadlightLegal({ focus }) {
             </a>.
           </p>
           <p>
-            <strong>What Master Glazier does, and does not do.</strong> It permanently stops the
-            break ads between runs, and it opens every glass palette. The mend stays available,
-            because it is something you choose to watch in exchange for something, and taking it
-            away would make the purchase worse rather than better. Once you have finished a first
-            run, the advertising code is started each time the game opens, whether or not you own
-            Master Glazier, and it keeps a mend ready in the background in case you ask for one
-            &mdash; so this section still applies to you, even if you never watch one. For an
-            owner it never loads a break ad at all.
+            <strong>What Master Glazier does, and does not do.</strong> It permanently stops the break ads between runs, and it opens every glass palette.
+            The mend stays available, because it is something you choose to watch in exchange for
+            something, and taking it away would make the purchase worse rather than better. The
+            advertising code still runs whether or not you own Master Glazier, so that a mend is
+            ready if you ask for one &mdash; which means this section still applies to you, even if
+            you never watch an ad.
           </p>
 
           <h4>Your choices about advertising</h4>

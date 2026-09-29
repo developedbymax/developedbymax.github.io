@@ -133,18 +133,18 @@ export default function WreckmoorLegal({ focus }) {
             The game is free and is funded by advertising. Ads are served through{' '}
             <strong>Google AdMob</strong>. Google may fill an ad slot with its own advertisers
             or with other advertising companies that buy ad space through Google&rsquo;s
-            platform. No other ad network is built into the game. Ads appear in only these places:
+            platform. No other ad network is built into the game. It has two kinds of ad, and
+            neither is ever shown during the tutorial:
           </p>
           <ul>
             <li>
-              <strong>A break ad</strong>, considered only when you leave the results of a run that
-              has already ended &mdash; not after every finished run, never soon after opening the game or after the last ad, never after a very short run, and never
-              in safe practice. Nothing ever interrupts play.
+              <strong>A break ad</strong>, which may be shown when you leave the results of a run
+              that has ended.
             </li>
             <li>
-              <strong>A repair</strong>, which you choose to watch at some district gates: it restores one armor segment before you go deeper. It is not
-              offered in the daily expedition or in practice. A skipped or failed ad gives nothing
-              and costs nothing.
+              <strong>A repair</strong>, which you can choose to watch at a district gate: it
+              restores one armor segment before you go deeper. A skipped or failed ad gives
+              nothing and costs nothing.
             </li>
           </ul>
           <p>To serve and measure ads, Google and those advertisers may collect:</p>
@@ -188,14 +188,12 @@ export default function WreckmoorLegal({ focus }) {
             </a>.
           </p>
           <p>
-            <strong>What Remove break ads does, and does not do.</strong> It permanently stops the
-            break ads between runs, and once the store confirms you own it the game no longer
-            requests them at all. The repair ad stays available, because it is something you choose
-            to watch in exchange for something, and taking it away would make the purchase worse
-            rather than better. The advertising code is still started each time the game opens,
-            whether or not you own it, and it keeps a repair ad loaded in the background so that one
-            is ready if you ask for it &mdash; so this section still applies to you, even if you
-            never watch one.
+            <strong>What Remove break ads does, and does not do.</strong> It permanently stops the break ads between runs.
+            The repair ad stays available, because it is something you choose to watch in exchange for
+            something, and taking it away would make the purchase worse rather than better. The
+            advertising code still runs whether or not you own Remove break ads, so that a repair is
+            ready if you ask for one &mdash; which means this section still applies to you, even if
+            you never watch an ad.
           </p>
 
           <h4>Your choices about advertising</h4>

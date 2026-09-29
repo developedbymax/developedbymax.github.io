@@ -134,27 +134,25 @@ export default function StarshellLegal({ focus }) {
             The game is free and is funded by advertising. Ads are served through{' '}
             <strong>Google AdMob</strong>. Google may fill an ad slot with its own advertisers
             or with other advertising companies that buy ad space through Google&rsquo;s
-            platform. No other ad network is built into the game. Ads appear in only these places:
+            platform. No other ad network is built into the game. It has three kinds of ad, and
+            none is ever shown during flight school, the game&rsquo;s tutorial:
           </p>
           <ul>
             <li>
-              <strong>An end-of-run ad</strong>, considered only on the screen a run has already
-              ended on &mdash; not after every run, never soon after the last one, never after
-              a very short run, and never after the daily festival. Nothing ever comes between a
-              launch and its score.
+              <strong>An end-of-run ad</strong>, which may be shown on the screen a run has ended on.
             </li>
             <li>
-              <strong>A relight</strong>, which you choose to watch in exchange for
-              one more shell on a night you missed, when the quota was still within reach.
+              <strong>A relight</strong>, which you choose to watch in exchange for one more shell on
+              a night you missed.
             </li>
             <li>
-              <strong>A reroll</strong>, which you choose to watch in exchange for
-              three different rewards to pick from.
+              <strong>A reroll</strong>, which you choose to watch in exchange for three different
+              rewards to pick from.
             </li>
           </ul>
           <p>
-            The game limits how often each is offered, neither is ever offered on the daily festival, and neither is shown unless you ask for it. A cancelled or failed ad gives nothing and costs
-            nothing.
+            Relight and reroll are never shown unless you ask for them. A cancelled or failed ad
+            gives nothing and costs nothing.
           </p>
           <p>To serve and measure ads, Google and those advertisers may collect:</p>
           <table className="tbl">
@@ -197,14 +195,12 @@ export default function StarshellLegal({ focus }) {
             </a>.
           </p>
           <p>
-            <strong>What Master Pyrotechnician does, and does not do.</strong> It permanently
-            stops the end-of-run ad. Relight and reroll stay available, because they are
-            something you choose to watch in exchange for something, and taking them away would
-            make the purchase worse rather than better. Once you are past flight school, the
-            advertising code is started each time the game opens, whether or not you own it, and
-            it keeps a rewarded ad loaded in the background so that one is ready if you ask for
-            it &mdash; so this section still applies to you, even if you never watch one. It no
-            longer loads the end-of-run ad for you at all.
+            <strong>What Master Pyrotechnician does, and does not do.</strong> It permanently stops the end-of-run ad.
+            Relight and reroll stay available, because they are something you choose to watch in exchange for
+            something, and taking them away would make the purchase worse rather than better. The
+            advertising code still runs whether or not you own Master Pyrotechnician, so that a relight or reroll is
+            ready if you ask for one &mdash; which means this section still applies to you, even if
+            you never watch an ad.
           </p>
 
           <h4>Your choices about advertising</h4>

@@ -128,19 +128,17 @@ export default function PearlboundLegal({ focus }) {
             The game is free and is funded by advertising. Ads are served through{' '}
             <strong>Google AdMob</strong>. Google may fill an ad slot with its own advertisers
             or with other advertising companies that buy ad space through Google&rsquo;s
-            platform. No other ad network is built into the game. Ads appear in only these places:
+            platform. No other ad network is built into the game. It has two kinds of ad, and
+            neither is ever shown during the tutorial:
           </p>
           <ul>
             <li>
-              <strong>A break ad</strong>, considered only when you leave a dive that has already
-              ended &mdash; not after every finished dive, never soon after
-              the last one, never after a very short dive, and never in safe practice. Nothing ever
-              interrupts a shot.
+              <strong>A break ad</strong>, which may be shown when you leave a dive that has ended.
             </li>
             <li>
-              <strong>A rescue</strong>, which you choose to watch when your shell
-              breaks: it restores one hull and keeps your treasure and gifts. The game limits how often it is offered. A skipped or failed
-              ad gives nothing and costs nothing.
+              <strong>A rescue</strong>, which you choose to watch when your shell breaks: it
+              restores one hull and keeps your treasure and gifts. A skipped or failed ad gives
+              nothing and costs nothing.
             </li>
           </ul>
           <p>To serve and measure ads, Google and those advertisers may collect:</p>
@@ -184,14 +182,12 @@ export default function PearlboundLegal({ focus }) {
             </a>.
           </p>
           <p>
-            <strong>What Remove break ads does, and does not do.</strong> It permanently stops the
-            break ads between dives, and once the store confirms you own it the game no longer
-            requests them at all. The rescue ad stays available, because it is something you choose
-            to watch in exchange for something, and taking it away would make the purchase worse
-            rather than better. The advertising code is still started each time the game opens,
-            whether or not you own it, and it keeps a rescue ad loaded in the background so that one
-            is ready if you ask for it &mdash; so this section still applies to you, even if you
-            never watch one.
+            <strong>What Remove break ads does, and does not do.</strong> It permanently stops the break ads between dives.
+            The rescue ad stays available, because it is something you choose to watch in exchange for
+            something, and taking it away would make the purchase worse rather than better. The
+            advertising code still runs whether or not you own Remove break ads, so that a rescue is
+            ready if you ask for one &mdash; which means this section still applies to you, even if
+            you never watch an ad.
           </p>
 
           <h4>Your choices about advertising</h4>

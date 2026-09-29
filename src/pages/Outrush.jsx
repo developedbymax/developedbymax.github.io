@@ -246,7 +246,7 @@ export default function Outrush() {
                 <li>No account, no email, no sign-in.</li>
                 <li>No location, contacts, photos or microphone.</li>
                 <li>Scores never leave the device.</li>
-                <li>Buy <b>Remove Ads</b> and the ad SDK is never started at all.</li>
+                <li>Buy <b>Remove Ads</b> and the ad code stops running.</li>
               </ul>
             </Reveal>
           </div>

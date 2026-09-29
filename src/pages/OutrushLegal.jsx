@@ -47,8 +47,7 @@ export default function OutrushLegal() {
               its own. Your scores, stars, unlocked palettes and settings live in a small
               database on your phone and are never uploaded. The one thing that does leave
               your device is advertising data, collected by our ad partner so it can serve
-              ads &mdash; and if you buy <strong>Remove Ads</strong>, that code never even
-              starts.
+              ads &mdash; and once you own <strong>Remove Ads</strong>, that code stops running.
             </p>
             <p>Everything below is the same statement in full.</p>
           </div>
@@ -139,9 +138,7 @@ export default function OutrushLegal() {
             </a>.
           </p>
           <p>
-            <strong>If you purchase Remove Ads, the advertising SDK is never initialised.</strong>{' '}
-            No ad requests are made and no advertising identifier is read. This is not a
-            setting that hides ads after the fact &mdash; the code simply does not run.
+            <strong>Once you own Remove Ads, the advertising code stops.</strong>{' '} No ad is shown to you, and from the next time you open the game the advertising SDK is not started at all: no ad requests are made and no advertising identifier is read. The revive you would otherwise watch an ad for is free instead.
           </p>
 
           <h4>Your choices about advertising</h4>

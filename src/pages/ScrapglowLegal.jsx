@@ -110,16 +110,18 @@ export default function ScrapglowLegal() {
             The game is free and is funded by advertising. Ads are served through{' '}
             <strong>Google AdMob</strong>. Google may fill an ad slot with its own advertisers
             or with other advertising companies that buy ad space through Google&rsquo;s
-            platform. No other ad network is built into the game. Ads appear in only these places:
+            platform. No other ad network is built into the game. It has two kinds of ad, and
+            neither is ever shown during Flight School, the game&rsquo;s tutorial:
           </p>
           <ul>
             <li>
-              <strong>A break ad</strong>, considered when you leave the results screen after
-              some completed runs, never during play and never in Flight School.
+              <strong>A break ad</strong>, which may be shown when you leave the results screen
+              after a run.
             </li>
             <li>
-              <strong>A rescue ad</strong>, which you choose to watch, in
-              exchange for a restored hull charge. The game limits how often it is offered, it is never shown unless you ask for it, and a cancelled or failed ad gives no rescue.
+              <strong>A rescue ad</strong>, which you choose to watch in exchange for a restored
+              hull charge. It is never shown unless you ask for it, and a cancelled or failed ad
+              gives no rescue.
             </li>
           </ul>
           <p>To serve and measure ads, Google and those advertisers may collect:</p>
@@ -163,12 +165,12 @@ export default function ScrapglowLegal() {
             </a>.
           </p>
           <p>
-            <strong>What Remove break ads does, and does not do.</strong> It permanently stops
-            the ads between runs. The rescue ad stays available, because it is something you
-            choose to watch in exchange for something, and taking it away would make the
-            purchase worse rather than better. That means the advertising code is still started
-            after you buy &mdash; so this section still applies to you. If you never watch a
-            rescue ad, no ad is ever requested.
+            <strong>What Remove break ads does, and does not do.</strong> It permanently stops the ads between runs.
+            The rescue ad stays available, because it is something you choose to watch in exchange for
+            something, and taking it away would make the purchase worse rather than better. The
+            advertising code still runs whether or not you own Remove break ads, so that a rescue is
+            ready if you ask for one &mdash; which means this section still applies to you, even if
+            you never watch an ad.
           </p>
 
           <h4>Your choices about advertising</h4>

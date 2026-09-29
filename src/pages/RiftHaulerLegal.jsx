@@ -135,19 +135,18 @@ export default function RiftHaulerLegal({ focus }) {
             The game is free and is funded by advertising. Ads are served through{' '}
             <strong>Google AdMob</strong>. Google may fill an ad slot with its own advertisers
             or with other advertising companies that buy ad space through Google&rsquo;s
-            platform. No other ad network is built into the game. Ads appear in only these places:
+            platform. No other ad network is built into the game. It has two kinds of ad, and
+            neither is ever shown during the tutorial:
           </p>
           <ul>
             <li>
-              <strong>A break ad</strong>, considered only on the results screen once an expedition
-              has ended &mdash; not after every finished expedition, never soon after the last full-screen ad, never in the first session, and never after an expedition
-              you rescued. Nothing ever interrupts play, and no ad appears between islands.
+              <strong>A break ad</strong>, which may be shown on the results screen once an
+              expedition has ended.
             </li>
             <li>
-              <strong>A rescue</strong>, which you choose to watch when your
-              rover goes down with time still on the clock: it puts the rover back on the pad with
-              one hull, without the cargo it was carrying. The game limits how often it is offered. A skipped or failed ad gives nothing and
-              costs nothing.
+              <strong>A rescue</strong>, which you choose to watch when your rover goes down with
+              time still on the clock: it puts the rover back on the pad with one hull, without the
+              cargo it was carrying. A skipped or failed ad gives nothing and costs nothing.
             </li>
           </ul>
           <p>To serve and measure ads, Google and those advertisers may collect:</p>
@@ -191,13 +190,12 @@ export default function RiftHaulerLegal({ focus }) {
             </a>.
           </p>
           <p>
-            <strong>What Remove break ads does, and does not do.</strong> It permanently stops the
-            break ads between expeditions; once the store confirms you own it, the game never shows
-            you one. The rescue ad stays available, because it is something you choose to watch in
-            exchange for something, and taking it away would make the purchase worse rather than
-            better. The advertising code is still started each time the game opens, whether or not
-            you own it, and it keeps ads loaded in the background so that a rescue is ready if you
-            ask for one &mdash; so this section still applies to you, even if you never watch one.
+            <strong>What Remove break ads does, and does not do.</strong> It permanently stops the break ads between expeditions.
+            The rescue ad stays available, because it is something you choose to watch in exchange for
+            something, and taking it away would make the purchase worse rather than better. The
+            advertising code still runs whether or not you own Remove break ads, so that a rescue is
+            ready if you ask for one &mdash; which means this section still applies to you, even if
+            you never watch an ad.
           </p>
 
           <h4>Your choices about advertising</h4>

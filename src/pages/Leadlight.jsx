@@ -287,7 +287,7 @@ export default function Leadlight() {
               <ul className="bullets">
                 <li>Plays fully offline.</li>
                 <li>No account, no email, no sign-in.</li>
-                <li>No location, contacts, photos or microphone.</li>
+                <li>No location, contacts or microphone, and nothing read from your photos.</li>
                 <li>No crash reporting and no analytics, at all.</li>
                 <li>Windows and scores never leave the device unless you share one.</li>
               </ul>

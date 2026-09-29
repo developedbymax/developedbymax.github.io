@@ -128,7 +128,7 @@ export default function LeadlightLegal({ focus }) {
             device, writes that one picture to its own cache, and hands it to your phone&rsquo;s
             share sheet. Where it goes from there &mdash; a message, a social app, your photos
             &mdash; is your choice, and is governed by that app or service, not by this policy.
-            The game sends it nowhere itself, and never asks for access to your photos. The next
+            The game sends it nowhere itself, and never reads your photo library. On iOS, the first time you choose <em>Save Image</em>, your phone asks whether Leadlight may add pictures to your photos: that permission can only add a picture, never see the ones already there, and you can change it at any time in <em>Settings &rarr; Leadlight &rarr; Photos</em>. The next
             window you share replaces the previous picture.
           </p>
           <p>
@@ -268,7 +268,7 @@ export default function LeadlightLegal({ focus }) {
           <h3>5. What the game does not do</h3>
           <ul>
             <li>No account, sign-in, email address or password.</li>
-            <li>No access to location, contacts, photos, camera or microphone.</li>
+            <li>No access to location, contacts, camera or microphone, and no reading of your photos &mdash; only adding a window you choose to save.</li>
             <li>No gameplay analytics sent anywhere.</li>
             <li>No crash reporting.</li>
             <li>No network requests of its own, not even to check for updates.</li>

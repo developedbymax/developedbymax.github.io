@@ -110,7 +110,7 @@ export default function ScrapglowLegal() {
             The game is free and is funded by advertising. Ads are served through{' '}
             <strong>Google AdMob</strong>. Google may fill an ad slot with its own advertisers
             or with other advertising companies that buy ad space through Google&rsquo;s
-            platform. No other ad network is built into the game. There are exactly two places an ad can appear:
+            platform. No other ad network is built into the game. Ads appear in only these places:
           </p>
           <ul>
             <li>
@@ -118,9 +118,8 @@ export default function ScrapglowLegal() {
               some completed runs, never during play and never in Flight School.
             </li>
             <li>
-              <strong>A rescue ad</strong>, which you choose to watch, once per expedition, in
-              exchange for a restored hull charge. It is never shown unless you ask for it, and
-              a cancelled or failed ad gives no rescue.
+              <strong>A rescue ad</strong>, which you choose to watch, in
+              exchange for a restored hull charge. The game limits how often it is offered, it is never shown unless you ask for it, and a cancelled or failed ad gives no rescue.
             </li>
           </ul>
           <p>To serve and measure ads, Google and those advertisers may collect:</p>
@@ -395,7 +394,7 @@ export default function ScrapglowLegal() {
           <p>
             Unless you have purchased Remove break ads, the game shows a short ad after some
             completed runs. Separately, and whether or not you have bought anything, you may choose
-            to watch a rescue ad once per expedition in exchange for a restored hull charge; that
+            to watch a rescue ad, when one is offered, in exchange for a restored hull charge; that
             one is never shown unless you ask for it. Advertising is supplied by third parties; we
             do not control which specific ads are shown and are not responsible for their content or
             for anything you buy from an advertiser. What advertising partners collect is described

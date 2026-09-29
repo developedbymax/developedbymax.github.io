@@ -99,7 +99,7 @@ export const games = [
     },
     facts: [
       ['3', 'Hits and the run is over'],
-      ['1', 'Rescue per expedition'],
+      ['18', 'Pieces in a full hold'],
       ['15', 'Original sound effects'],
       ['0', 'Accounts or logins'],
     ],

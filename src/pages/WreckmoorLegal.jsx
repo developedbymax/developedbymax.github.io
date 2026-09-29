@@ -133,18 +133,16 @@ export default function WreckmoorLegal({ focus }) {
             The game is free and is funded by advertising. Ads are served through{' '}
             <strong>Google AdMob</strong>. Google may fill an ad slot with its own advertisers
             or with other advertising companies that buy ad space through Google&rsquo;s
-            platform. No other ad network is built into the game. There are exactly two places an ad can appear:
+            platform. No other ad network is built into the game. Ads appear in only these places:
           </p>
           <ul>
             <li>
               <strong>A break ad</strong>, considered only when you leave the results of a run that
-              has already ended &mdash; at most every third finished run, never within a minute and
-              a half of opening the game or of the last ad, never after a very short run, and never
+              has already ended &mdash; not after every finished run, never soon after opening the game or after the last ad, never after a very short run, and never
               in safe practice. Nothing ever interrupts play.
             </li>
             <li>
-              <strong>A repair</strong>, which you choose to watch at a district gate, at most once
-              every three districts: it restores one armor segment before you go deeper. It is not
+              <strong>A repair</strong>, which you choose to watch at some district gates: it restores one armor segment before you go deeper. It is not
               offered in the daily expedition or in practice. A skipped or failed ad gives nothing
               and costs nothing.
             </li>
@@ -424,8 +422,7 @@ export default function WreckmoorLegal({ focus }) {
           <p>
             Unless you have purchased Remove break ads, the game may show an ad when you leave the
             results of some finished runs. Separately, and whether or not you have bought anything,
-            you may choose to watch an ad at a district gate to repair one armor segment, at most
-            once every three districts; it is never shown unless you ask for it.
+            you may choose to watch an ad at a district gate to repair one armor segment when one is offered; it is never shown unless you ask for it.
             Advertising is supplied by third parties; we do not control which specific ads are shown
             and are not responsible for their content or for anything you buy from an advertiser.
             What advertising partners collect is described in the{' '}

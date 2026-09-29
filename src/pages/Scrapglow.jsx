@@ -36,7 +36,7 @@ const INSIDE = [
   ['Daily expedition', 'Seeded from your device’s own calendar date, so everyone flies the same arena that day.'],
   ['Flight School', 'A short, safe tutorial before the first run — and replayable any time from the home screen.'],
   ['Pick up where you left', 'An expedition saves after deposits, periodically, and when you pause or leave. Continue it from the home screen.'],
-  ['One rescue per run', 'A single restored hull charge, once, per expedition. After that, three hits is three hits.'],
+  ['A rescue, if you want it', 'When a run ends, you may choose to watch an ad to restore a hull charge and fly on. It is offered sparingly, so three hits is usually three hits.'],
   ['Original sound', 'Fifteen hand-made effects and a quiet sixteen-second ambient loop, all written for this game.'],
   ['Plays offline', 'No account, no server. Your best score and settings save to the device.'],
 ];

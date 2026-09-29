@@ -59,7 +59,7 @@ const ISLANDS = [
 
 const INSIDE = [
   ['A daily expedition', 'The same three islands for everyone playing on the same day.'],
-  ['One rescue an expedition', 'When the rover goes down with time left on the clock, you may choose to watch an ad to go on from the pad with one hull.'],
+  ['A rescue, if you want it', 'When the rover goes down with time left on the clock, you may choose to watch an ad to go on from the pad with one hull. It is offered sparingly.'],
   ['Pause and come back', 'Save an expedition from the pause menu and continue it later, down to the island as it stood.'],
   ['Rover colours', 'Seafoam, earned by banking 150 crystals, and Amethyst in an optional cosmetic pack.'],
   ['Your settings', 'Sound effects, ambient music and haptics on their own switches, and a reduced-effects mode.'],

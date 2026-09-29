@@ -135,19 +135,18 @@ export default function RiftHaulerLegal({ focus }) {
             The game is free and is funded by advertising. Ads are served through{' '}
             <strong>Google AdMob</strong>. Google may fill an ad slot with its own advertisers
             or with other advertising companies that buy ad space through Google&rsquo;s
-            platform. No other ad network is built into the game. There are exactly two places an ad can appear:
+            platform. No other ad network is built into the game. Ads appear in only these places:
           </p>
           <ul>
             <li>
               <strong>A break ad</strong>, considered only on the results screen once an expedition
-              has ended &mdash; at most every third finished expedition, never within three minutes
-              of the last full-screen ad, never in the first session, and never after an expedition
+              has ended &mdash; not after every finished expedition, never soon after the last full-screen ad, never in the first session, and never after an expedition
               you rescued. Nothing ever interrupts play, and no ad appears between islands.
             </li>
             <li>
-              <strong>A rescue</strong>, which you choose to watch, once per expedition, when your
+              <strong>A rescue</strong>, which you choose to watch when your
               rover goes down with time still on the clock: it puts the rover back on the pad with
-              one hull, without the cargo it was carrying. A skipped or failed ad gives nothing and
+              one hull, without the cargo it was carrying. The game limits how often it is offered. A skipped or failed ad gives nothing and
               costs nothing.
             </li>
           </ul>
@@ -434,7 +433,7 @@ export default function RiftHaulerLegal({ focus }) {
           <p>
             Unless you have purchased Remove break ads, the game may show an ad on the results screen
             after some finished expeditions. Separately, and whether or not you have bought anything,
-            you may choose to watch an ad to rescue an expedition once; it is never shown unless you
+            you may choose to watch an ad to rescue an expedition when one is offered; it is never shown unless you
             ask for it. Advertising is supplied by third parties; we do not control which specific
             ads are shown and are not responsible for their content or for anything you buy from an
             advertiser. What advertising partners collect is described in the{' '}

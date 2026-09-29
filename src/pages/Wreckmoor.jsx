@@ -61,7 +61,7 @@ const INSIDE = [
   ['Daily expedition', 'Three districts built from the day’s seed, the same layout for everyone that day, to see how cleanly you can take them.'],
   ['Safe practice', 'A yard with no blasts and nothing at stake, to learn the swing. Your saved run is left exactly where it was.'],
   ['Saves as you play', 'Close the game mid-district and it is waiting where you left it, with a countdown before anything moves.'],
-  ['One repair every three districts', 'At a gate you may choose to watch an ad to restore one armor segment. It is never required and never offered in daily or practice runs.'],
+  ['Repair at the gate', 'At some gates you may choose to watch an ad to restore one armor segment. It is never required and never offered in daily or practice runs.'],
   ['Reduced effects', 'Turn off flashes and particles, and sound and haptics separately.'],
   ['Phones and tablets', 'Portrait on phones; a wide tablet gets the yard at full height with the readout beside it.'],
 ];

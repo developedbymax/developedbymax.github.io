@@ -134,27 +134,26 @@ export default function StarshellLegal({ focus }) {
             The game is free and is funded by advertising. Ads are served through{' '}
             <strong>Google AdMob</strong>. Google may fill an ad slot with its own advertisers
             or with other advertising companies that buy ad space through Google&rsquo;s
-            platform. No other ad network is built into the game. There are exactly three places an ad can appear:
+            platform. No other ad network is built into the game. Ads appear in only these places:
           </p>
           <ul>
             <li>
               <strong>An end-of-run ad</strong>, considered only on the screen a run has already
-              ended on &mdash; at most every other run, never soon after the last one, never after
+              ended on &mdash; not after every run, never soon after the last one, never after
               a very short run, and never after the daily festival. Nothing ever comes between a
               launch and its score.
             </li>
             <li>
-              <strong>A relight</strong>, which you choose to watch, once per run, in exchange for
+              <strong>A relight</strong>, which you choose to watch in exchange for
               one more shell on a night you missed, when the quota was still within reach.
             </li>
             <li>
-              <strong>A reroll</strong>, which you choose to watch, once per run, in exchange for
+              <strong>A reroll</strong>, which you choose to watch in exchange for
               three different rewards to pick from.
             </li>
           </ul>
           <p>
-            Neither relight nor reroll is ever offered on the daily festival, and neither is
-            shown unless you ask for it. A cancelled or failed ad gives nothing and costs
+            The game limits how often each is offered, neither is ever offered on the daily festival, and neither is shown unless you ask for it. A cancelled or failed ad gives nothing and costs
             nothing.
           </p>
           <p>To serve and measure ads, Google and those advertisers may collect:</p>
@@ -431,7 +430,7 @@ export default function StarshellLegal({ focus }) {
           <p>
             Unless you have purchased Master Pyrotechnician, the game may show an ad at the end of
             some runs. Separately, and whether or not you have bought anything, you may choose to
-            watch an ad for a relight or for a reroll, each once per run; neither is ever shown
+            watch an ad for a relight or for a reroll, when offered; neither is ever shown
             unless you ask for it. Advertising is supplied by third parties; we do not control which
             specific ads are shown and are not responsible for their content or for anything you buy
             from an advertiser. What advertising partners collect is described in the{' '}

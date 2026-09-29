@@ -128,18 +128,18 @@ export default function PearlboundLegal({ focus }) {
             The game is free and is funded by advertising. Ads are served through{' '}
             <strong>Google AdMob</strong>. Google may fill an ad slot with its own advertisers
             or with other advertising companies that buy ad space through Google&rsquo;s
-            platform. No other ad network is built into the game. There are exactly two places an ad can appear:
+            platform. No other ad network is built into the game. Ads appear in only these places:
           </p>
           <ul>
             <li>
               <strong>A break ad</strong>, considered only when you leave a dive that has already
-              ended &mdash; at most every third finished dive, never within a minute and a half of
+              ended &mdash; not after every finished dive, never soon after
               the last one, never after a very short dive, and never in safe practice. Nothing ever
               interrupts a shot.
             </li>
             <li>
-              <strong>A rescue</strong>, which you choose to watch, once per dive, when your shell
-              breaks: it restores one hull and keeps your treasure and gifts. A skipped or failed
+              <strong>A rescue</strong>, which you choose to watch when your shell
+              breaks: it restores one hull and keeps your treasure and gifts. The game limits how often it is offered. A skipped or failed
               ad gives nothing and costs nothing.
             </li>
           </ul>
@@ -417,7 +417,7 @@ export default function PearlboundLegal({ focus }) {
           <p>
             Unless you have purchased Remove break ads, the game may show an ad when you leave some
             finished dives. Separately, and whether or not you have bought anything, you may choose
-            to watch an ad to rescue a dive once; it is never shown unless you ask for it.
+            to watch an ad to rescue a dive when one is offered; it is never shown unless you ask for it.
             Advertising is supplied by third parties; we do not control which specific ads are shown
             and are not responsible for their content or for anything you buy from an advertiser.
             What advertising partners collect is described in the{' '}

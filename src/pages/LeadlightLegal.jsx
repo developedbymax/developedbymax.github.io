@@ -147,19 +147,15 @@ export default function LeadlightLegal({ focus }) {
             The game is free and is funded by advertising. Ads are served through{' '}
             <strong>Google AdMob</strong>. Google may fill an ad slot with its own advertisers
             or with other advertising companies that buy ad space through Google&rsquo;s
-            platform. No other ad network is built into the game. There are exactly two places an
-            ad can appear:
+            platform. No other ad network is built into the game. Ads appear in only these places:
           </p>
           <ul>
             <li>
-              <strong>A break ad</strong>, considered only once a run has ended &mdash; at most
-              every third run, never within two minutes of the last one, never after a run shorter
-              than forty seconds, and never after the daily window. Never while a window is being
+              <strong>A break ad</strong>, considered only once a run has ended &mdash; not after every run, never soon after the last one, never after a very short run, and never after the daily window. Never while a window is being
               played, and never between one window and the next.
             </li>
             <li>
-              <strong>A mend</strong>, which you choose to watch, once per run, to mend one crack
-              and carry on in the same window. It is never offered on the daily window.
+              <strong>A mend</strong>, which you choose to watch, to mend one crack and carry on in the same window. The game limits how often it is offered, and never offers it on the daily window.
             </li>
           </ul>
           <p>
@@ -443,8 +439,7 @@ export default function LeadlightLegal({ focus }) {
           <h3>6. Advertising</h3>
           <p>
             Unless you have purchased Master Glazier, the game may show an ad after some runs.
-            Separately, and whether or not you have bought anything, you may choose to watch an ad to
-            mend a crack, once per run; it is never shown unless you ask for it. Advertising is
+            Separately, and whether or not you have bought anything, you may choose to watch an ad to mend a crack when one is offered; it is never shown unless you ask for it. Advertising is
             supplied by third parties; we do not control which specific ads are shown and are not
             responsible for their content or for anything you buy from an advertiser. What
             advertising partners collect is described in the <a href="#privacy">Privacy Policy</a>{' '}

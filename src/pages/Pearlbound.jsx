@@ -59,7 +59,7 @@ const DIVE = [
 
 const INSIDE = [
   ['Safe practice', 'A dive with nothing at stake: no hull lost, no records touched, and your saved dive left exactly where it was.'],
-  ['One rescue a dive', 'When your shell breaks, you may choose to watch an ad to keep your treasure and gifts and go on with one hull.'],
+  ['A rescue, if you want it', 'When your shell breaks, you may choose to watch an ad to keep your treasure and gifts and go on with one hull. It is offered sparingly.'],
   ['Saves as you play', 'Close the game mid-dive and it is waiting where you left it, down to the reef as it stood.'],
   ['2× speed', 'Speed up a long rebound without changing where it goes.'],
   ['Reduced effects', 'Turn off the particles, and sound and haptics separately.'],

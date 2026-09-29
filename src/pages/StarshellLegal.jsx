@@ -44,7 +44,7 @@ export default function StarshellLegal({ focus }) {
   return (
     <GameShell game={game} links={NAV} legal>
       <div className="wrap prose">
-        <p className="updated">Last updated &middot; 19 September 2026</p>
+        <p className="updated">Last updated &middot; 29 September 2026</p>
         <h1>Privacy Policy &amp; Terms of Use</h1>
         <p>
           Two documents, kept on one page so there is only one link to follow. The privacy
@@ -132,8 +132,9 @@ export default function StarshellLegal({ focus }) {
           <h3>2. What our advertising partner collects</h3>
           <p>
             The game is free and is funded by advertising. Ads are served through{' '}
-            <strong>AppLovin MAX</strong>, which may also route ad requests to other advertising
-            networks it mediates on our behalf. There are exactly three places an ad can appear:
+            <strong>Google AdMob</strong>. Google may fill an ad slot with its own advertisers
+            or with other advertising companies that buy ad space through Google&rsquo;s
+            platform. No other ad network is built into the game. There are exactly three places an ad can appear:
           </p>
           <ul>
             <li>
@@ -156,7 +157,7 @@ export default function StarshellLegal({ focus }) {
             shown unless you ask for it. A cancelled or failed ad gives nothing and costs
             nothing.
           </p>
-          <p>To serve and measure ads, these partners may collect:</p>
+          <p>To serve and measure ads, Google and those advertisers may collect:</p>
           <table className="tbl">
             <thead>
               <tr><th>What</th><th>Why</th></tr>
@@ -178,14 +179,22 @@ export default function StarshellLegal({ focus }) {
                 <td>Ad interaction events &mdash; that an ad was requested, shown, watched to the end, or tapped</td>
                 <td>To pay for the ad correctly and to detect fraud</td>
               </tr>
+              <tr>
+                <td>Diagnostics about the advertising code itself &mdash; its performance and any errors it hits</td>
+                <td>To keep the ad service working and to fix problems in it</td>
+              </tr>
             </tbody>
           </table>
           <p>
             We do not receive this data ourselves in a form that identifies you; we see only
-            aggregate revenue reporting. AppLovin&rsquo;s own privacy policy governs what they do
-            with it:{' '}
-            <a href="https://www.applovin.com/privacy/" rel="noopener" target="_blank">
-              applovin.com/privacy
+            aggregate revenue reporting. Google&rsquo;s own policies govern what it does
+            with it: the{' '}
+            <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">
+              Google Privacy Policy
+            </a>{' '}
+            and{' '}
+            <a href="https://policies.google.com/technologies/partner-sites" rel="noopener" target="_blank">
+              how Google uses information from apps that use its services
             </a>.
           </p>
           <p>
@@ -208,7 +217,7 @@ export default function StarshellLegal({ focus }) {
               <em>Settings &rarr; Privacy &amp; Security &rarr; Tracking</em>.
             </li>
             <li>
-              <strong>In the EEA and the UK</strong>, a consent dialog appears before any
+              <strong>In the EEA and the UK</strong>, Google&rsquo;s consent dialog appears before any
               advertising code starts, and your answer is recorded on your device. You can
               reopen it at any time from <em>Ad privacy choices</em> on the game&rsquo;s home
               screen.
@@ -216,6 +225,13 @@ export default function StarshellLegal({ focus }) {
             <li>
               <strong>On Android</strong>, you can reset or delete your Advertising ID in{' '}
               <em>Settings &rarr; Google &rarr; Ads</em>.
+            </li>
+            <li>
+              <strong>With your Google account</strong>, you can review and limit ad
+              personalisation at{' '}
+              <a href="https://myadcenter.google.com/" rel="noopener" target="_blank">
+                myadcenter.google.com
+              </a>.
             </li>
           </ul>
 
@@ -275,7 +291,7 @@ export default function StarshellLegal({ focus }) {
             <li><strong>To delete everything</strong>, uninstall the game.</li>
             <li>
               <strong>For advertising data</strong>, use the choices in section 2, or contact
-              AppLovin directly using their privacy policy.
+              Google directly using its privacy policy.
             </li>
           </ul>
           <p>

@@ -13,6 +13,10 @@ import Pearlbound from './pages/Pearlbound.jsx';
 import PearlboundLegal from './pages/PearlboundLegal.jsx';
 import Wreckmoor from './pages/Wreckmoor.jsx';
 import WreckmoorLegal from './pages/WreckmoorLegal.jsx';
+import RiftHauler from './pages/RiftHauler.jsx';
+import RiftHaulerLegal from './pages/RiftHaulerLegal.jsx';
+import Leadlight from './pages/Leadlight.jsx';
+import LeadlightLegal from './pages/LeadlightLegal.jsx';
 import NotFound from './pages/NotFound.jsx';
 
 import './styles/base.css';
@@ -47,6 +51,12 @@ export default function App() {
         <Route path="/wreckmoor" element={<Wreckmoor />} />
         <Route path="/wreckmoor/privacy" element={<WreckmoorLegal />} />
         <Route path="/wreckmoor/terms" element={<WreckmoorLegal focus="terms" />} />
+        <Route path="/rifthauler" element={<RiftHauler />} />
+        <Route path="/rifthauler/privacy" element={<RiftHaulerLegal />} />
+        <Route path="/rifthauler/terms" element={<RiftHaulerLegal focus="terms" />} />
+        <Route path="/leadlight" element={<Leadlight />} />
+        <Route path="/leadlight/privacy" element={<LeadlightLegal />} />
+        <Route path="/leadlight/terms" element={<LeadlightLegal focus="terms" />} />
 
         {/* The .html spelling of each game's legal page. Outrush's privacy URL is
             baked into the shipped app and into two store listings, so that one has
@@ -64,6 +74,10 @@ export default function App() {
         <Route path="/pearlbound/terms.html" element={<PearlboundLegal focus="terms" />} />
         <Route path="/wreckmoor/privacy.html" element={<WreckmoorLegal />} />
         <Route path="/wreckmoor/terms.html" element={<WreckmoorLegal focus="terms" />} />
+        <Route path="/rifthauler/privacy.html" element={<RiftHaulerLegal />} />
+        <Route path="/rifthauler/terms.html" element={<RiftHaulerLegal focus="terms" />} />
+        <Route path="/leadlight/privacy.html" element={<LeadlightLegal />} />
+        <Route path="/leadlight/terms.html" element={<LeadlightLegal focus="terms" />} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>

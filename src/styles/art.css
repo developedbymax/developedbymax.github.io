@@ -233,3 +233,55 @@
 @keyframes cw-glow  { 0%, 100% { opacity: .1; } 50% { opacity: .24; } }
 @keyframes cw-blast { 0% { transform: scale(.08); opacity: .8; } 100% { transform: scale(1); opacity: .2; } }
 @keyframes cw-wake  { 0%, 100% { opacity: .6; } 50% { opacity: 1; } }
+
+/* ============================ Rift Hauler ============================
+   The pad's ring pulses as it does during a deposit, and the chips of the break
+   rise and fade. At rest it is the rover mid-drill, so reduced motion loses
+   nothing. */
+.rh { width: 100%; height: auto; filter: drop-shadow(0 22px 40px rgba(0,0,0,.6)); }
+@media (prefers-reduced-motion: no-preference) {
+  .rh-ring  { animation: rh-pad 2.6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+  .rh-chips { animation: rh-chips 1.3s ease-out infinite; }
+}
+@keyframes rh-pad   { 0%, 100% { opacity: .7; transform: scale(1); } 50% { opacity: 1; transform: scale(1.12); } }
+@keyframes rh-chips { 0% { opacity: 0; transform: translateY(4px); } 30% { opacity: 1; } 100% { opacity: 0; transform: translateY(-5px); } }
+
+/* ============================ Leadlight ============================
+   One 7s cycle: a cut starts in the open, both arms grow until each reaches an
+   edge, the line sets into lead, the spark-free half floods and the window
+   lights. At rest it is the finished cut — line set, half flooded, window lit —
+   so reduced motion loses nothing. The sparks drift on loops sized so they can
+   never touch an edge; see LeadlightWindow.jsx. */
+.ll { height: auto; display: block;
+      filter: drop-shadow(0 0 30px rgba(255, 241, 207, .14)) drop-shadow(0 22px 40px rgba(0, 0, 0, .6)); }
+.ll-mark { filter: drop-shadow(0 0 14px rgba(255, 241, 207, .12)); }
+.ll-arm, .ll-origin, .ll-fresh { opacity: 0; }
+.ll-arm { stroke-dasharray: 100 100; }
+.ll-lit { opacity: .2; }
+@media (prefers-reduced-motion: no-preference) {
+  .ll-arm    { animation: ll-arm 7s linear infinite; }
+  .ll-origin { animation: ll-origin 7s linear infinite; }
+  .ll-set    { animation: ll-set 7s ease-out infinite; }
+  .ll-flood  { animation: ll-flood 7s ease-out infinite; }
+  .ll-fresh  { animation: ll-fresh 7s ease-out infinite; }
+  .ll-lit    { animation: ll-lit 7s ease-in-out infinite; }
+  .ll-spark    { animation: ll-drift 5.3s ease-in-out infinite; }
+  .ll-spark.s1 { animation-duration: 4.4s; animation-direction: reverse; }
+  .ll-spark.s2 { animation-duration: 6.1s; animation-delay: -2s; }
+}
+@keyframes ll-arm {
+  0%, 14%   { opacity: 1; stroke-dashoffset: 100; }
+  27%       { opacity: 1; stroke-dashoffset: 0; }
+  31%, 100% { opacity: 0; stroke-dashoffset: 0; }
+}
+@keyframes ll-origin { 0%, 13% { opacity: 0; } 14%, 27% { opacity: 1; } 30%, 100% { opacity: 0; } }
+@keyframes ll-set    { 0%, 27% { opacity: 0; } 29%, 86% { opacity: 1; } 94%, 100% { opacity: 0; } }
+@keyframes ll-flood  { 0%, 27% { opacity: 0; } 32%, 86% { opacity: 1; } 94%, 100% { opacity: 0; } }
+@keyframes ll-fresh  { 0%, 27% { opacity: 0; } 28% { opacity: .55; } 40%, 100% { opacity: 0; } }
+@keyframes ll-lit    { 0%, 29% { opacity: 0; } 38% { opacity: .7; } 50%, 86% { opacity: .2; } 94%, 100% { opacity: 0; } }
+@keyframes ll-drift {
+  0%, 100% { transform: translate(0, 0); }
+  25%      { transform: translate(calc(var(--dr) * .85), calc(var(--dr) * -.45)); }
+  50%      { transform: translate(calc(var(--dr) * .15), calc(var(--dr) * .8)); }
+  75%      { transform: translate(calc(var(--dr) * -.85), calc(var(--dr) * .3)); }
+}

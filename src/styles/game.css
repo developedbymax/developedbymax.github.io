@@ -185,8 +185,23 @@
 .fam-foot b { color: var(--ink); }
 
 /* a star's mark standing in for the coloured chip */
-.kind .sq.ss-sq, .kind .sq.pb-sq, .kind .sq.cw-sq { background: color-mix(in srgb, var(--ink) 6%, transparent); border: 1px solid var(--line); }
-.kind .sq.ss-sq::after, .kind .sq.pb-sq::after, .kind .sq.cw-sq::after { display: none; }
+.kind .sq.ss-sq, .kind .sq.pb-sq, .kind .sq.rh-sq, .kind .sq.cw-sq, .kind .sq.ll-sq { background: color-mix(in srgb, var(--ink) 6%, transparent); border: 1px solid var(--line); }
+.kind .sq.ss-sq::after, .kind .sq.pb-sq::after, .kind .sq.rh-sq::after, .kind .sq.cw-sq::after, .kind .sq.ll-sq::after { display: none; }
+
+/* ---------- Leadlight: the four sparks, and the six panes ---------- */
+.ll-kinds { list-style: none; padding: 0; margin: 14px 0 0; display: grid; gap: 14px; }
+.ll-kinds li { display: grid; grid-template-columns: 26px 1fr; gap: 12px; align-items: start; }
+.ll-kinds li svg { margin-top: 1px; }
+.ll-kinds b { display: block; font-size: 14.5px; font-weight: 800; color: var(--ink); margin-bottom: 2px; }
+.ll-kinds span { font-size: 14px; line-height: 1.55; color: var(--ink-mute); }
+.ll-panes { display: grid; grid-template-columns: repeat(6, 1fr); gap: clamp(10px, 1.6vw, 22px); }
+@media (max-width: 760px) { .ll-panes { grid-template-columns: repeat(3, 1fr); row-gap: 22px; } }
+.ll-panes figure { margin: 0; text-align: center; }
+.ll-panes svg { display: block; width: 100%; max-width: 110px; height: auto; margin: 0 auto 10px; }
+.ll-panes figcaption {
+  font-size: 11px; font-weight: 800; letter-spacing: 1.2px;
+  text-transform: uppercase; color: var(--ink-faint);
+}
 
 /* ---------- the other games, at the foot of a game page ---------- */
 /* one card per other game — three of them now, so three across */

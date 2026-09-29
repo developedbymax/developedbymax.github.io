@@ -129,6 +129,49 @@ export const meta = {
     themeColor: '#191522',
     favicon: '/favicon-wreckmoor.svg',
   },
+  '/rifthauler': {
+    title: 'Rift Hauler — a crystal mining run for iOS and Android',
+    description:
+      'Drill a path through a crumbling island, fill a small rover with crystals and bank them at the gold pad before the ground gives way. Free, offline, no account.',
+    themeColor: '#0D151D',
+    favicon: '/favicon-rifthauler.svg',
+  },
+  '/rifthauler/privacy': {
+    title: 'Privacy Policy & Terms of Use — Rift Hauler',
+    description:
+      'What Rift Hauler stores on your device, what its advertising partner collects, what Remove break ads does and does not stop, the cosmetic Rover color pack, and the terms you agree to when you play.',
+    themeColor: '#0D151D',
+    favicon: '/favicon-rifthauler.svg',
+  },
+  '/rifthauler/terms': {
+    title: 'Terms of Use & Privacy Policy — Rift Hauler',
+    description:
+      'The terms you agree to when you play Rift Hauler, on the same page as its privacy policy: the two purchases, the optional rescue ad, and what happens to your records.',
+    themeColor: '#0D151D',
+    favicon: '/favicon-rifthauler.svg',
+  },
+
+  '/leadlight': {
+    title: 'Leadlight: Glass Cutter — a stained-glass arcade game for iOS and Android',
+    description:
+      'Sparks bounce inside a pane of clear glass. Swipe to cut it at any angle, seal the sparks out, and every piece left with no spark in it floods with colour. Free, offline, no account.',
+    themeColor: '#110E13',
+    favicon: '/favicon-leadlight.svg',
+  },
+  '/leadlight/privacy': {
+    title: 'Privacy Policy & Terms of Use — Leadlight',
+    description:
+      'What Leadlight stores on your device, what its advertising partner collects, what Master Glazier does and does not stop, how a shared window leaves your phone, and the terms you agree to when you play.',
+    themeColor: '#110E13',
+    favicon: '/favicon-leadlight.svg',
+  },
+  '/leadlight/terms': {
+    title: 'Terms of Use & Privacy Policy — Leadlight',
+    description:
+      'The terms you agree to when you play Leadlight, on the same page as its privacy policy: the one purchase, the optional mend, and what happens to your windows and records.',
+    themeColor: '#110E13',
+    favicon: '/favicon-leadlight.svg',
+  },
 
   '/404': {
     title: 'Page not found — developed by max',
@@ -155,8 +198,9 @@ export const meta = {
    Starshell also has a terms address of its own, /starshell/terms(.html),
    because that is the URL its store copy and release runbook were written with.
    It renders the same page and opens it at the terms. Pearlbound follows it:
-   its app passes AppLovin a separate terms URL, /pearlbound/terms, and so does
-   Wreckmoor's, /wreckmoor/terms. */
+   its app is given a separate terms URL, /pearlbound/terms, and so are
+   Wreckmoor's, /wreckmoor/terms, Rift Hauler's, /rifthauler/terms, and
+   Leadlight's, /leadlight/terms, which its store copy names as terms.html. */
 export const ALIASES = {
   '/outrush/privacy.html': '/outrush/privacy',
   '/huecomb/privacy.html': '/huecomb/privacy',
@@ -167,6 +211,10 @@ export const ALIASES = {
   '/pearlbound/terms.html': '/pearlbound/terms',
   '/wreckmoor/privacy.html': '/wreckmoor/privacy',
   '/wreckmoor/terms.html': '/wreckmoor/terms',
+  '/rifthauler/privacy.html': '/rifthauler/privacy',
+  '/rifthauler/terms.html': '/rifthauler/terms',
+  '/leadlight/privacy.html': '/leadlight/privacy',
+  '/leadlight/terms.html': '/leadlight/terms',
 };
 
 export const ROUTES = [
@@ -177,4 +225,6 @@ export const ROUTES = [
   '/starshell', '/starshell/privacy', '/starshell/terms',
   '/pearlbound', '/pearlbound/privacy', '/pearlbound/terms',
   '/wreckmoor', '/wreckmoor/privacy', '/wreckmoor/terms',
+  '/rifthauler', '/rifthauler/privacy', '/rifthauler/terms',
+  '/leadlight', '/leadlight/privacy', '/leadlight/terms',
 ];

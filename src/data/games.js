@@ -8,7 +8,8 @@
    HuecombRN/src/ui/theme.js, Scrapglow's from ScrapglowRN/src/game/Scene.js,
    Starshell's from StarshellRN/src/ui/theme.js, Pearlbound's from
    PearlboundRN/src/game/Scene.tsx, Wreckmoor's from
-   CinderwakeRN/src/game/Scene.js and App.js. */
+   CinderwakeRN/src/game/Scene.js and App.js, Rift Hauler's from
+   RiftHaulerApp/src/style.css, Leadlight's from LeadlightRN/src/ui/theme.js. */
 
 export const games = [
   {
@@ -194,6 +195,68 @@ export const games = [
       ['4', 'Armor, and the run is over'],
       ['5', 'Upgrades, stacking to III'],
       ['∞', 'No last district'],
+    ],
+    hasLegal: true,
+  },
+  {
+    slug: 'rifthauler',
+    name: 'Rift Hauler',
+    subtitle: 'Crystal Miner',
+    genre: 'Mining arcade',
+    year: '2026',
+    status: 'soon',
+    featured: false,
+    art: 'rifthauler',
+    tagline: 'Cut your own shortcut. Bring the haul home.',
+    blurb:
+      'Drill a path through a crumbling island, fill a small rover with crystals, and bring them home to the gold pad before the ground gives way. Three islands, a clock on each, and the same question on every trip: one more crystal?',
+    short: 'Grab one more crystal, then get back before the island breaks.',
+    theme: {
+      ground: '#0D151D',
+      surface: '#16222B',
+      line: '#314149',
+      accent: '#B5EED4',
+      onAccent: '#152B28',
+      ink: '#EBE9DB',
+      inkMute: '#8A9B9E',
+      inkFaint: '#62777E',
+    },
+    facts: [
+      ['3', 'Islands, a clock on each'],
+      ['1:50', 'To bank the quota and get out'],
+      ['6', 'Modules to build a rover from'],
+      ['+20%', 'For bringing a full load home'],
+    ],
+    hasLegal: true,
+  },
+  {
+    slug: 'leadlight',
+    name: 'Leadlight',
+    subtitle: 'Glass Cutter',
+    genre: 'Glass-cutting arcade',
+    year: '2026',
+    status: 'soon',
+    featured: false,
+    art: 'leadlight',
+    tagline: 'Cut the glass, trap the sparks.',
+    blurb:
+      'Sparks bounce inside a pane of clear glass. Swipe at any angle and a lead line grows to both edges; if a spark touches it before it lands, the pane cracks. Every piece left with no spark in it floods with colour, and three quarters lights the window.',
+    short: 'Swipe at any angle. Seal the sparks out and the glass floods in.',
+    theme: {
+      ground: '#110E13',
+      surface: '#1B161C',
+      line: '#2D2530',
+      accent: '#F3C46B',
+      onAccent: '#241A0E',
+      ink: '#F5ECDF',
+      inkMute: '#A8998A',
+      inkFaint: '#6D6158',
+    },
+    facts: [
+      ['75%', 'Of the glass lights a window'],
+      ['6', 'Panes, lancet to rose'],
+      ['5', 'Glass palettes'],
+      ['3', 'Cracks end a run'],
     ],
     hasLegal: true,
   },

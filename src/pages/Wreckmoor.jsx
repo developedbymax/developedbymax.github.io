@@ -32,7 +32,7 @@ const STEPS = [
 ];
 
 /* The upgrades, word for word as the game describes them (UPGRADES in
-   CinderwakeRN/src/core/game.js). The first five stack to III. */
+   WreckmoorRN/src/core/game.js). The first five stack to III. */
 const UPGRADES = [
   ['↔', 'Long reach', 'A wider swing. Tether length +18%.'],
   ['◆', 'Iron heart', 'Harder hits. Impact damage +45%.'],

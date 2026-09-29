@@ -13,7 +13,7 @@ const NAV = [
   ['Terms', '#terms'],
 ];
 
-/* Wreckmoor's own documents, written against what CinderwakeRN actually does.
+/* Wreckmoor's own documents, written against what WreckmoorRN actually does.
 
    What sets it apart, each of which a copy of another game's policy would get
    wrong. It sells ONE purchase, Remove break ads, which ends the interstitial

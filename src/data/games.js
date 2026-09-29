@@ -8,7 +8,7 @@
    HuecombRN/src/ui/theme.js, Scrapglow's from ScrapglowRN/src/game/Scene.js,
    Starshell's from StarshellRN/src/ui/theme.js, Pearlbound's from
    PearlboundRN/src/game/Scene.tsx, Wreckmoor's from
-   CinderwakeRN/src/game/Scene.js and App.js, Rift Hauler's from
+   WreckmoorRN/src/game/Scene.js and App.js, Rift Hauler's from
    RiftHaulerApp/src/style.css, Leadlight's from LeadlightRN/src/ui/theme.js. */
 
 export const games = [

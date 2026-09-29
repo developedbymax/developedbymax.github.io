@@ -4,7 +4,7 @@
    reinforced ones, three brass blocks with glowing cores, the upper gate, a
    red blast circle filling up, loose ember salvage, and the lavender skiff
    swinging its ember ball on a brass tether through the second row. Colours
-   are the ones CinderwakeRN/src/game/Scene.js paints with. At micro size it is
+   are the ones WreckmoorRN/src/game/Scene.js paints with. At micro size it is
    the app icon's skiff and ball on their own. */
 
 const HEX = 'M 0 -12 L 10 -6 L 10 6 L 0 12 L -10 6 L -10 -6 Z';

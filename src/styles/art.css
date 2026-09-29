@@ -220,7 +220,7 @@
 @keyframes pb-aim  { 0%, 100% { opacity: .45; } 50% { opacity: 1; } }
 @keyframes pb-glow { 0%, 100% { opacity: .06; transform: scale(1); } 50% { opacity: .16; transform: scale(1.35); } }
 
-/* ============================ Cinderwake ============================
+/* ============================ Wreckmoor ============================
    The ball's glow breathes with the swing and the blast ring closes the way
    the game's telegraph fills. At rest it is the mid-swing yard, so reduced
    motion loses nothing. */

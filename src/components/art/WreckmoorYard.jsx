@@ -1,4 +1,4 @@
-/* Cinderwake's demolition yard.
+/* Wreckmoor's demolition yard.
 
    A district as the game draws it: rows of ivory ceramic blocks and grey
    reinforced ones, three brass blocks with glowing cores, the upper gate, a
@@ -58,7 +58,7 @@ function Mark({ size, label }) {
   );
 }
 
-export default function CinderwakeYard({ size = 260, label, mark = false }) {
+export default function WreckmoorYard({ size = 260, label, mark = false }) {
   if (mark) return <Mark size={size} label={label} />;
   return (
     <svg

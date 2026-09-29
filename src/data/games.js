@@ -7,7 +7,7 @@
    Outrush's come from OutrushRN/src/ui/theme.js, Huecomb's from
    HuecombRN/src/ui/theme.js, Scrapglow's from ScrapglowRN/src/game/Scene.js,
    Starshell's from StarshellRN/src/ui/theme.js, Pearlbound's from
-   PearlboundRN/src/game/Scene.tsx, Cinderwake's from
+   PearlboundRN/src/game/Scene.tsx, Wreckmoor's from
    CinderwakeRN/src/game/Scene.js and App.js. */
 
 export const games = [
@@ -167,14 +167,14 @@ export const games = [
     hasLegal: true,
   },
   {
-    slug: 'cinderwake',
-    name: 'Cinderwake',
+    slug: 'wreckmoor',
+    name: 'Wreckmoor',
     subtitle: 'Wrecking Ball',
     genre: 'Momentum demolition',
     year: '2026',
     status: 'soon',
     featured: false,
-    art: 'cinderwake',
+    art: 'wreckmoor',
     tagline: 'Swing wide. Break the whole row.',
     blurb:
       'Steer a little salvage skiff with one thumb and let the wrecking ball on its tether do the damage. Curve your path to wind up the swing, smash through ceramic ruins to the glowing cores, and scoop up the salvage before you slip out through the gate.',

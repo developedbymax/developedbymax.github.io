@@ -1,19 +1,19 @@
 import { Link } from 'react-router-dom';
 import { bySlug, statusLabel } from '../data/games.js';
 import GameShell from '../components/GameShell.jsx';
-import CinderwakeYard from '../components/art/CinderwakeYard.jsx';
+import WreckmoorYard from '../components/art/WreckmoorYard.jsx';
 import Reveal from '../components/Reveal.jsx';
 import { Arrow } from '../components/Icons.jsx';
 import useMeta from '../components/useMeta.js';
 import { meta } from '../meta.js';
 
-const game = bySlug('cinderwake');
+const game = bySlug('wreckmoor');
 
 const NAV = [
   ['How it plays', '#play'],
   ['Upgrades', '#upgrades'],
   ['The wake', '#wake'],
-  ['Privacy', '/cinderwake/privacy'],
+  ['Privacy', '/wreckmoor/privacy'],
 ];
 
 const STEPS = [
@@ -73,8 +73,8 @@ const StoreButtons = () => (
   </>
 );
 
-export default function Cinderwake() {
-  useMeta(meta['/cinderwake']);
+export default function Wreckmoor() {
+  useMeta(meta['/wreckmoor']);
 
   return (
     <GameShell game={game} links={NAV}>
@@ -83,7 +83,7 @@ export default function Cinderwake() {
           <div>
             <p className="eyebrow">Free &middot; iPhone &amp; Android</p>
             <h1 className="title">
-              Cinderwake
+              Wreckmoor
               <span className="sub">Leave nothing unbroken.</span>
             </h1>
             <p className="lede">
@@ -103,7 +103,7 @@ export default function Cinderwake() {
           </div>
 
           <div className="ghero-art">
-            <CinderwakeYard size="clamp(260px, 31vw, 390px)" />
+            <WreckmoorYard size="clamp(260px, 31vw, 390px)" />
           </div>
         </div>
       </section>
@@ -214,14 +214,14 @@ export default function Cinderwake() {
                 uploaded anywhere. Uninstall the game and they are gone with it.
               </p>
               <p>
-                Cinderwake has its own privacy policy, separate from the other games, because what
+                Wreckmoor has its own privacy policy, separate from the other games, because what
                 it does is its own: it sells one thing, it ships no crash reporting at all, and its
                 purchase removes the ads between runs but keeps the optional repair ad you can
                 choose to watch.
               </p>
               <p>
-                <Link to="/cinderwake/privacy" style={{ color: 'var(--accent)', fontWeight: 700 }}>
-                  Read Cinderwake&rsquo;s privacy policy &rarr;
+                <Link to="/wreckmoor/privacy" style={{ color: 'var(--accent)', fontWeight: 700 }}>
+                  Read Wreckmoor&rsquo;s privacy policy &rarr;
                 </Link>
               </p>
             </Reveal>

@@ -5,15 +5,15 @@ import GameShell from '../components/GameShell.jsx';
 import useMeta from '../components/useMeta.js';
 import { meta } from '../meta.js';
 
-const game = bySlug('cinderwake');
+const game = bySlug('wreckmoor');
 
 const NAV = [
-  ['Game', '/cinderwake'],
+  ['Game', '/wreckmoor'],
   ['Privacy', '#privacy'],
   ['Terms', '#terms'],
 ];
 
-/* Cinderwake's own documents, written against what CinderwakeRN actually does.
+/* Wreckmoor's own documents, written against what CinderwakeRN actually does.
 
    What sets it apart, each of which a copy of another game's policy would get
    wrong. It sells ONE purchase, Remove break ads, which ends the interstitial
@@ -27,11 +27,11 @@ const NAV = [
    device's own date. On Android, Google Play's billing library sends Google its
    own diagnostics, which section 3 says plainly.
 
-   Served at /cinderwake/privacy and /cinderwake/terms, with the .html spelling
+   Served at /wreckmoor/privacy and /wreckmoor/terms, with the .html spelling
    of both; the app's EXPO_PUBLIC_PRIVACY_POLICY_URL and EXPO_PUBLIC_TERMS_URL
    point here. The terms address opens this same page at the terms. */
-export default function CinderwakeLegal({ focus }) {
-  useMeta(meta[focus === 'terms' ? '/cinderwake/terms' : '/cinderwake/privacy']);
+export default function WreckmoorLegal({ focus }) {
+  useMeta(meta[focus === 'terms' ? '/wreckmoor/terms' : '/wreckmoor/privacy']);
   const { hash } = useLocation();
 
   useEffect(() => {
@@ -47,7 +47,7 @@ export default function CinderwakeLegal({ focus }) {
           Two documents, kept on one page so there is only one link to follow. The privacy
           policy describes what the game does with information; the terms describe the
           agreement between you and us when you play. Both cover{' '}
-          <strong>Cinderwake</strong> only &mdash; the other games are separate apps with
+          <strong>Wreckmoor</strong> only &mdash; the other games are separate apps with
           their own policies.
         </p>
 
@@ -63,7 +63,7 @@ export default function CinderwakeLegal({ focus }) {
 
           <div className="callout">
             <p>
-              <strong>The short version.</strong> Cinderwake has no account and no server of its
+              <strong>The short version.</strong> Wreckmoor has no account and no server of its
               own, and it makes no network requests of its own. Your salvage, your records and
               the run you are part way through live on your phone and are never uploaded. The one
               thing that does leave your device is advertising data, collected by our ad partner
@@ -77,7 +77,7 @@ export default function CinderwakeLegal({ focus }) {
           </div>
 
           <p>
-            This policy explains how the mobile game <strong>Cinderwake</strong> (&ldquo;the
+            This policy explains how the mobile game <strong>Wreckmoor</strong> (&ldquo;the
             game&rdquo;, &ldquo;we&rdquo;) handles information. It covers the iOS and Android
             versions of the game and this website.
           </p>
@@ -90,7 +90,7 @@ export default function CinderwakeLegal({ focus }) {
           <h3>1. What the game stores on your device</h3>
           <p>
             The game keeps two small records on your phone. Nothing in them is transmitted to us:
-            Cinderwake has no backend server of its own, and none of it is uploaded anywhere.
+            Wreckmoor has no backend server of its own, and none of it is uploaded anywhere.
           </p>
           <ul>
             <li>
@@ -248,7 +248,7 @@ export default function CinderwakeLegal({ focus }) {
 
           <h3>4. Crash and error reporting</h3>
           <p>
-            <strong>There is none.</strong> Cinderwake ships no crash-reporting and no analytics
+            <strong>There is none.</strong> Wreckmoor ships no crash-reporting and no analytics
             SDK, so no report of any kind is sent when something goes wrong. If the game
             misbehaves, the only way we learn about it is if you tell us. If that ever changes,
             this section will change with it, before the build that changes it ships.
@@ -266,7 +266,7 @@ export default function CinderwakeLegal({ focus }) {
 
           <h3>6. Children</h3>
           <p>
-            Cinderwake is not directed at children under 13 (or the equivalent minimum age where
+            Wreckmoor is not directed at children under 13 (or the equivalent minimum age where
             you live), and we do not knowingly collect personal information from them. If you
             believe a child has provided information through the game, contact us and we will
             delete what we can reach.
@@ -330,7 +330,7 @@ export default function CinderwakeLegal({ focus }) {
           <p>
             These terms are an agreement between you and <strong>developed by max</strong>{' '}
             (&ldquo;we&rdquo;, &ldquo;us&rdquo;) covering the mobile game{' '}
-            <strong>Cinderwake</strong> (&ldquo;the game&rdquo;) and this website. By installing or
+            <strong>Wreckmoor</strong> (&ldquo;the game&rdquo;) and this website. By installing or
             playing the game you accept them. If you do not accept them, please do not install or
             play it.
           </p>
@@ -505,7 +505,7 @@ export default function CinderwakeLegal({ focus }) {
             </a>
           </p>
           <p style={{ marginTop: 26 }}>
-            <Link to="/cinderwake" style={{ fontWeight: 700 }}>&larr; Back to Cinderwake</Link>
+            <Link to="/wreckmoor" style={{ fontWeight: 700 }}>&larr; Back to Wreckmoor</Link>
           </p>
         </section>
       </div>

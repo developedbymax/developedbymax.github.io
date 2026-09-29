@@ -3,7 +3,7 @@ import HuecombComb from './HuecombComb.jsx';
 import ScrapglowArena from './ScrapglowArena.jsx';
 import StarshellShell from './StarshellShell.jsx';
 import PearlboundReef from './PearlboundReef.jsx';
-import CinderwakeYard from './CinderwakeYard.jsx';
+import WreckmoorYard from './WreckmoorYard.jsx';
 
 /* One entry point for a game's artwork at four sizes, so the home grid, the
    phone screens and the game heroes never drift apart. */
@@ -13,7 +13,7 @@ const SIZES = {
   scrapglow: { micro: 58, thumb: 152, phone: 200, card: 250, hero: 'clamp(260px, 32vw, 400px)' },
   starshell: { micro: 58, thumb: 112, phone: 176, card: 230, hero: 'clamp(250px, 29vw, 350px)' },
   pearlbound: { micro: 58, thumb: 132, phone: 190, card: 240, hero: 'clamp(260px, 31vw, 390px)' },
-  cinderwake: { micro: 58, thumb: 132, phone: 190, card: 240, hero: 'clamp(260px, 31vw, 390px)' },
+  wreckmoor: { micro: 58, thumb: 132, phone: 190, card: 240, hero: 'clamp(260px, 31vw, 390px)' },
 };
 
 const BARE = new Set(['micro', 'thumb']);   // no score pop, no tray
@@ -30,6 +30,6 @@ export default function GameArt({ slug, size = 'card', ...rest }) {
   /* the pearl in its shell, the app icon, where the reef would be specks */
   if (slug === 'pearlbound') return <PearlboundReef size={s} mark={size === 'micro'} {...rest} />;
   /* the skiff and its ball, the app icon, where the yard would be specks */
-  if (slug === 'cinderwake') return <CinderwakeYard size={s} mark={size === 'micro'} {...rest} />;
+  if (slug === 'wreckmoor') return <WreckmoorYard size={s} mark={size === 'micro'} {...rest} />;
   return null;
 }

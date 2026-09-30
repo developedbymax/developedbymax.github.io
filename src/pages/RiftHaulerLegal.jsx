@@ -109,7 +109,7 @@ export default function RiftHaulerLegal({ focus }) {
             <li>
               Your settings &mdash; sound effects, ambient music, haptics, reduced effects and the
               rover colour you chose &mdash; whether you have seen the field manual, and when the
-              last break ad was shown, so the next one is spaced out
+              last full-screen ad was shown
             </li>
             <li>Whether you own each of the two purchases in section 3 &mdash; a yes or no for each</li>
           </ul>
@@ -140,8 +140,8 @@ export default function RiftHaulerLegal({ focus }) {
           </p>
           <ul>
             <li>
-              <strong>A break ad</strong>, which may be shown on the results screen once an
-              expedition has ended.
+              <strong>A break ad</strong>, which may be shown when you start another expedition from
+              the results screen.
             </li>
             <li>
               <strong>A rescue</strong>, which you choose to watch when your rover goes down with
@@ -429,8 +429,8 @@ export default function RiftHaulerLegal({ focus }) {
 
           <h3>6. Advertising</h3>
           <p>
-            Unless you have purchased Remove break ads, the game may show an ad on the results screen
-            after some finished expeditions. Separately, and whether or not you have bought anything,
+            Unless you have purchased Remove break ads, the game may show an ad when you start another
+            expedition from the results screen. Separately, and whether or not you have bought anything,
             you may choose to watch an ad to rescue an expedition when one is offered; it is never shown unless you
             ask for it. Advertising is supplied by third parties; we do not control which specific
             ads are shown and are not responsible for their content or for anything you buy from an

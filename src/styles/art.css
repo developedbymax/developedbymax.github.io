@@ -285,3 +285,6 @@
   50%      { transform: translate(calc(var(--dr) * .15), calc(var(--dr) * .8)); }
   75%      { transform: translate(calc(var(--dr) * -.85), calc(var(--dr) * .3)); }
 }
+
+/* Floehelm: the bay, and the app icon at micro size */
+.fh { width: 100%; height: auto; filter: drop-shadow(0 22px 40px rgba(0,0,0,.6)); }

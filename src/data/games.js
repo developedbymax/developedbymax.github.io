@@ -9,7 +9,8 @@
    Starshell's from StarshellRN/src/ui/theme.js, Pearlbound's from
    PearlboundRN/src/game/Scene.tsx, Wreckmoor's from
    WreckmoorRN/src/game/Scene.js and App.js, Rift Hauler's from
-   RiftHaulerApp/src/style.css, Leadlight's from LeadlightRN/src/ui/theme.js. */
+   RiftHaulerApp/src/style.css, Leadlight's from LeadlightRN/src/ui/theme.js,
+   Floehelm's from FloehelmRN/App.tsx (C) and src/game/Scene.tsx. */
 
 export const games = [
   {
@@ -257,6 +258,37 @@ export const games = [
       ['6', 'Panes, lancet to rose'],
       ['5', 'Glass palettes'],
       ['3', 'Cracks end a run'],
+    ],
+    hasLegal: true,
+  },
+  {
+    slug: 'floehelm',
+    name: 'Floehelm',
+    subtitle: 'Icebreaker',
+    genre: 'Ice-carving rescue',
+    year: '2026',
+    status: 'soon',
+    featured: false,
+    art: 'floehelm',
+    tagline: 'Carve a way through the ice. Bring the fleet home.',
+    blurb:
+      'Steer a small icebreaker with one thumb and cut channels through a frozen bay. Every boat you reach sails home along the water you opened, while you break a path to the next one before the storm closes in.',
+    short: 'Cut a channel and the stranded boats sail home along it.',
+    theme: {
+      ground: '#102635',
+      surface: '#193442',
+      line: '#35515E',
+      accent: '#F0BC72',
+      onAccent: '#102635',
+      ink: '#F0EDE2',
+      inkMute: '#9EB8C1',
+      inkFaint: '#6E8C97',
+    },
+    facts: [
+      ['6', 'Boats stranded in every bay'],
+      ['3', 'Ships in the fleet'],
+      ['6', 'Upgrades, stacking to III'],
+      ['∞', 'No last bay'],
     ],
     hasLegal: true,
   },

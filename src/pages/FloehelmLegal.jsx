@@ -1,5 +1,4 @@
-import { useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { bySlug } from '../data/games.js';
 import GameShell from '../components/GameShell.jsx';
 import useMeta from '../components/useMeta.js';
@@ -29,16 +28,11 @@ const NAV = [
    so purchases are checked by the store on the device. The daily chart's seed
    comes from the device's own date.
 
-   Served at /floehelm/privacy and /floehelm/terms, with the .html spelling of
-   both; the app's EXPO_PUBLIC_PRIVACY_POLICY_URL and EXPO_PUBLIC_TERMS_URL
-   point here. The terms address opens this same page at the terms. */
-export default function FloehelmLegal({ focus }) {
-  useMeta(meta[focus === 'terms' ? '/floehelm/terms' : '/floehelm/privacy']);
-  const { hash } = useLocation();
-
-  useEffect(() => {
-    if (focus && !hash) document.getElementById(focus)?.scrollIntoView({ behavior: 'instant' });
-  }, [focus, hash]);
+   Served at /floehelm/privacy (and /floehelm/privacy.html). It is the game's
+   one legal page: the app's EXPO_PUBLIC_PRIVACY_POLICY_URL points here, and
+   its EXPO_PUBLIC_TERMS_URL at /floehelm/privacy#terms. */
+export default function FloehelmLegal() {
+  useMeta(meta['/floehelm/privacy']);
 
   return (
     <GameShell game={game} links={NAV} legal>

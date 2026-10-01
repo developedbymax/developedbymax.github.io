@@ -61,7 +61,6 @@ export default function App() {
         <Route path="/leadlight/terms" element={<LeadlightLegal focus="terms" />} />
         <Route path="/floehelm" element={<Floehelm />} />
         <Route path="/floehelm/privacy" element={<FloehelmLegal />} />
-        <Route path="/floehelm/terms" element={<FloehelmLegal focus="terms" />} />
 
         {/* The .html spelling of each game's legal page. Outrush's privacy URL is
             baked into the shipped app and into two store listings, so that one has
@@ -84,7 +83,6 @@ export default function App() {
         <Route path="/leadlight/privacy.html" element={<LeadlightLegal />} />
         <Route path="/leadlight/terms.html" element={<LeadlightLegal focus="terms" />} />
         <Route path="/floehelm/privacy.html" element={<FloehelmLegal />} />
-        <Route path="/floehelm/terms.html" element={<FloehelmLegal focus="terms" />} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>

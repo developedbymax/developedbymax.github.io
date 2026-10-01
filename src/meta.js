@@ -143,13 +143,6 @@ export const meta = {
     themeColor: '#102635',
     favicon: '/favicon-floehelm.svg',
   },
-  '/floehelm/terms': {
-    title: 'Terms of Use & Privacy Policy — Floehelm',
-    description:
-      'The terms you agree to when you play Floehelm, on the same page as its privacy policy: the three purchases, the optional Paint bonus ad, and what happens to your salvage.',
-    themeColor: '#102635',
-    favicon: '/favicon-floehelm.svg',
-  },
   '/rifthauler': {
     title: 'Rift Hauler — a crystal mining run for iOS and Android',
     description:
@@ -221,8 +214,9 @@ export const meta = {
    It renders the same page and opens it at the terms. Pearlbound follows it:
    its app is given a separate terms URL, /pearlbound/terms, and so are
    Wreckmoor's, /wreckmoor/terms, Rift Hauler's, /rifthauler/terms, and
-   Leadlight's, /leadlight/terms, which its store copy names as terms.html,
-   and Floehelm's, /floehelm/terms. */
+   Leadlight's, /leadlight/terms, which its store copy names as terms.html.
+   Floehelm has no terms address: its terms are on its privacy page, reached
+   as /floehelm/privacy#terms. */
 export const ALIASES = {
   '/outrush/privacy.html': '/outrush/privacy',
   '/huecomb/privacy.html': '/huecomb/privacy',
@@ -238,7 +232,6 @@ export const ALIASES = {
   '/leadlight/privacy.html': '/leadlight/privacy',
   '/leadlight/terms.html': '/leadlight/terms',
   '/floehelm/privacy.html': '/floehelm/privacy',
-  '/floehelm/terms.html': '/floehelm/terms',
 };
 
 export const ROUTES = [
@@ -251,5 +244,5 @@ export const ROUTES = [
   '/wreckmoor', '/wreckmoor/privacy', '/wreckmoor/terms',
   '/rifthauler', '/rifthauler/privacy', '/rifthauler/terms',
   '/leadlight', '/leadlight/privacy', '/leadlight/terms',
-  '/floehelm', '/floehelm/privacy', '/floehelm/terms',
+  '/floehelm', '/floehelm/privacy',
 ];

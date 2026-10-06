@@ -65,24 +65,24 @@ export const meta = {
   },
 
   '/starshell': {
-    title: 'Starshell — a firework ordering puzzle for iOS and Android',
+    title: 'Starshell — an endless orbital arcade game for iOS and Android',
     description:
-      'Pack a firework shell with stars and launch it. It fires bottom to top and every star changes what happens above it, so five stars is 120 orderings and exactly one is best. Free, offline, no account.',
-    themeColor: '#0A0A18',
+      'One small ship circles a distant world, and one tap reverses it. Dodge the meteors that fall where you are heading, chase the starlight, and survive sector after sector. Free, offline, no account.',
+    themeColor: '#0A121D',
     favicon: '/favicon-starshell.svg',
   },
   '/starshell/privacy': {
     title: 'Privacy Policy & Terms of Use — Starshell',
     description:
-      'What Starshell stores on your device, what its advertising partner collects, what Master Pyrotechnician does and does not stop, and the terms you agree to when you play.',
-    themeColor: '#0A0A18',
+      'What Starshell stores on your device, what its advertising partner collects, what the ad-free purchase does and does not stop, and the terms you agree to when you play.',
+    themeColor: '#0A121D',
     favicon: '/favicon-starshell.svg',
   },
   '/starshell/terms': {
     title: 'Terms of Use & Privacy Policy — Starshell',
     description:
-      'The terms you agree to when you play Starshell, on the same page as its privacy policy: the one purchase, the optional ads, and what happens to your records.',
-    themeColor: '#0A0A18',
+      'The terms you agree to when you play Starshell, on the same page as its privacy policy: the one purchase, the optional ad, and what happens to your records.',
+    themeColor: '#0A121D',
     favicon: '/favicon-starshell.svg',
   },
 

@@ -15,13 +15,18 @@ const NAV = [
 
 /* Starshell's own documents, written against what StarshellRN actually does.
 
-   Four facts set it apart from the other three games, and each would be stated
-   wrongly by a copy of theirs. It sells ONE purchase, Master Pyrotechnician. That
-   purchase ends the end-of-run ad but keeps the two rewarded offers, relight and
-   reroll. The ad SDK is started on every launch once flight school is done,
-   bought or not, and keeps a rewarded ad loaded — App.js starts it whatever the
-   player owns, and policy.adFormatsFor() drops only the interstitial for an
-   owner — so the advertising section applies to a buyer who never watches one.
+   Starshell was rebuilt in October 2026 as an endless orbital arcade game; this
+   page was rewritten with it. Four facts set it apart from the other games, and
+   each would be stated wrongly by a copy of theirs. It sells ONE purchase,
+   Ad-free Starshell (store id com.starshell.game.pyrotechnician, kept from the
+   firework game). That purchase ends the BETWEEN-FLIGHTS ad but keeps the one
+   rewarded offer, Second wind. The break is shown on the way in to a new flight
+   the player has asked for, never when resuming a saved one. Keep every sentence
+   about when an ad appears qualitative, never a count or a gap. The ad SDK is
+   started on every launch from the home screen, bought or not, and keeps a
+   rewarded ad loaded — App.js starts it whatever the player owns, and
+   policy.adFormatsFor() drops only the interstitial for an owner — so the
+   advertising section applies to a buyer who never watches one.
    The consent flow (iOS tracking prompt; Google's UMP dialog in the EEA and UK)
    runs inside that start, before any ad is requested.
    And the game makes no network request of its own: no crash reporter, no
@@ -44,7 +49,7 @@ export default function StarshellLegal({ focus }) {
   return (
     <GameShell game={game} links={NAV} legal>
       <div className="wrap prose">
-        <p className="updated">Last updated &middot; 29 September 2026</p>
+        <p className="updated">Last updated &middot; 6 October 2026</p>
         <h1>Privacy Policy &amp; Terms of Use</h1>
         <p>
           Two documents, kept on one page so there is only one link to follow. The privacy
@@ -67,15 +72,15 @@ export default function StarshellLegal({ focus }) {
           <div className="callout">
             <p>
               <strong>The short version.</strong> Starshell has no account and no server of its
-              own, and it makes no network requests of its own. Your records, the sky book and
-              the festival you are part way through live on your phone and are never uploaded.
+              own, and it makes no network requests of its own. Your records, your settings and
+              the flight you are part way through live on your phone and are never uploaded.
               The one thing that does leave your device is advertising data, collected by our
               ad partner so it can serve ads.
             </p>
             <p>
-              <strong>Read section 2 before you buy.</strong> Master Pyrotechnician ends the ad
-              at the end of a run. It deliberately does <em>not</em> remove the two ads you can
-              choose to watch, so the advertising code still runs after you buy it.
+              <strong>Read section 2 before you buy.</strong> Ad-free Starshell ends the ads
+              shown between flights. It deliberately does <em>not</em> remove Second wind, the ad
+              you can choose to watch, so the advertising code still runs after you buy it.
             </p>
           </div>
 
@@ -92,21 +97,19 @@ export default function StarshellLegal({ focus }) {
 
           <h3>1. What the game stores on your device</h3>
           <p>
-            The game keeps three small records on your phone. Nothing in them is transmitted to
+            The game keeps three small records on your phone: your profile, the flight in
+            progress, and whether you own the purchase. Nothing in them is transmitted to
             us: Starshell has no backend server of its own, and none of it is uploaded anywhere.
           </p>
           <ul>
             <li>
-              Your records &mdash; best festival score, brightest single shell, furthest night,
-              the same for Endless, how many runs you have finished, and how many of your shells
-              were perfect and how close the rest came
+              Your records &mdash; personal best, farthest sector, longest streak, how many flights
+              you have flown and how many stars you have caught
             </li>
-            <li>The sky book: each star you have lit, and the brightest it has burned for you</li>
-            <li>Your result in each day&rsquo;s festival, by date, so the daily is played once a day</li>
-            <li>Whether sound and haptics are on, and whether you have finished flight school</li>
-            <li>The festival in progress, so closing or backgrounding the game does not lose it</li>
-            <li>When an ad was last shown at the end of a run, so they can be kept apart</li>
-            <li>Whether you own Master Pyrotechnician &mdash; a single yes or no</li>
+            <li>Whether sound, haptics and gentle effects are on</li>
+            <li>The flight in progress, so pausing, closing or backgrounding the game does not lose it</li>
+            <li>When an ad was last shown between flights</li>
+            <li>Whether you own Ad-free Starshell &mdash; a single yes or no</li>
           </ul>
           <p>
             That is the whole list. The game has no player name, no profile and no in-game
@@ -125,8 +128,9 @@ export default function StarshellLegal({ focus }) {
             section 3.
           </p>
           <p>
-            The daily festival is generated from your device&rsquo;s own calendar date. Your date
-            is read on the device and never sent anywhere.
+            If you played the earlier, firework version of Starshell on this device, its records
+            are left where they were and are not uploaded either; only your sound and haptics
+            settings are carried over.
           </p>
 
           <h3>2. What our advertising partner collects</h3>
@@ -134,25 +138,23 @@ export default function StarshellLegal({ focus }) {
             The game is free and is funded by advertising. Ads are served through{' '}
             <strong>Google AdMob</strong>. Google may fill an ad slot with its own advertisers
             or with other advertising companies that buy ad space through Google&rsquo;s
-            platform. No other ad network is built into the game. It has three kinds of ad, and
-            none is ever shown during flight school, the game&rsquo;s tutorial:
+            platform. No other ad network is built into the game. It has two kinds of ad, and
+            neither is ever shown during a flight:
           </p>
           <ul>
             <li>
-              <strong>An end-of-run ad</strong>, which may be shown on the screen a run has ended on.
+              <strong>A break between flights</strong>, which may be shown after you ask for a new
+              flight and before it begins. Never during play, never when you return to a saved
+              flight, and never before your very first flight.
             </li>
             <li>
-              <strong>A relight</strong>, which you choose to watch in exchange for one more shell on
-              a night you missed.
-            </li>
-            <li>
-              <strong>A reroll</strong>, which you choose to watch in exchange for three different
-              rewards to pick from.
+              <strong>Second wind</strong>, which you choose to watch when a flight ends, in
+              exchange for carrying on with one hull point.
             </li>
           </ul>
           <p>
-            Relight and reroll are never shown unless you ask for them. A cancelled or failed ad
-            gives nothing and costs nothing.
+            Second wind is never shown unless you ask for it. An ad closed before the end, or one
+            that fails, gives nothing and costs nothing.
           </p>
           <p>To serve and measure ads, Google and those advertisers may collect:</p>
           <table className="tbl">
@@ -195,11 +197,11 @@ export default function StarshellLegal({ focus }) {
             </a>.
           </p>
           <p>
-            <strong>What Master Pyrotechnician does, and does not do.</strong> It permanently stops the end-of-run ad.
-            Relight and reroll stay available, because they are something you choose to watch in exchange for
-            something, and taking them away would make the purchase worse rather than better. The
-            advertising code still runs whether or not you own Master Pyrotechnician, so that a relight or reroll is
-            ready if you ask for one &mdash; which means this section still applies to you, even if
+            <strong>What Ad-free Starshell does, and does not do.</strong> It permanently stops the ads shown between flights.
+            Second wind stays available, because it is something you choose to watch in exchange for
+            something, and taking it away would make the purchase worse rather than better. The
+            advertising code still runs whether or not you own Ad-free Starshell, so that Second wind is
+            ready if you ask for it &mdash; which means this section still applies to you, even if
             you never watch an ad.
           </p>
 
@@ -214,8 +216,8 @@ export default function StarshellLegal({ focus }) {
             <li>
               <strong>In the EEA and the UK</strong>, Google&rsquo;s consent dialog appears before any
               advertising code starts, and your answer is recorded on your device. You can
-              reopen it at any time from <em>Ad privacy choices</em> on the game&rsquo;s home
-              screen.
+              reopen it at any time from <em>Ad privacy choices</em> in the game&rsquo;s
+              Settings.
             </li>
             <li>
               <strong>On Android</strong>, you can reset or delete your Advertising ID in{' '}
@@ -232,7 +234,7 @@ export default function StarshellLegal({ focus }) {
 
           <h3>3. Purchases</h3>
           <p>
-            The game offers <strong>one</strong> optional purchase: <em>Master Pyrotechnician</em>,
+            The game offers <strong>one</strong> optional purchase: <em>Ad-free Starshell</em>,
             a one-off, non-consumable purchase. There is no in-game currency and nothing
             consumable is sold. The purchase is processed entirely by{' '}
             <strong>Apple&rsquo;s App Store</strong> or <strong>Google Play</strong>.
@@ -281,7 +283,7 @@ export default function StarshellLegal({ focus }) {
           <ul>
             <li>
               <strong>To see everything the game holds about you</strong>, open the game &mdash;
-              your records and the sky book are shown there.
+              your records are shown on its home screen.
             </li>
             <li><strong>To delete everything</strong>, uninstall the game.</li>
             <li>
@@ -320,8 +322,8 @@ export default function StarshellLegal({ focus }) {
           <div className="callout">
             <p>
               <strong>The short version.</strong> Play the game, don&rsquo;t try to break it, and
-              understand that your records and the festival you are part way through live only on
-              your phone &mdash; uninstalling loses them. <strong>Master Pyrotechnician</strong> is
+              understand that your records and the flight you are part way through live only on
+              your phone &mdash; uninstalling loses them. <strong>Ad-free Starshell</strong> is
               tied to your store account and can be restored.
             </p>
           </div>
@@ -358,8 +360,8 @@ export default function StarshellLegal({ focus }) {
           <h3>3. Fair play</h3>
           <p>
             Please do not use cheats, automation, modified clients or memory editors, or otherwise
-            tamper with the game or its stored data to obtain scores, records, relights, rerolls
-            or purchases you have not earned or paid for. We may stop supporting a modified
+            tamper with the game or its stored data to obtain scores, records, second winds or
+            purchases you have not earned or paid for. We may stop supporting a modified
             installation, and a tampered save may stop working correctly.
           </p>
 
@@ -369,12 +371,10 @@ export default function StarshellLegal({ focus }) {
           </p>
           <ul>
             <li>
-              <strong>Master Pyrotechnician</strong> &mdash; a one-off, non-consumable purchase,
-              on that store account, that permanently stops the ad at the end of a run, adds a
-              sixth slot to every shell, and opens the whole sky book. The daily festival is the
-              exception to the sixth slot: it stays five slots for everyone, so a paid score and a
-              free score on it are the same contest. It does not remove the optional relight and
-              reroll ads, which you choose to watch.
+              <strong>Ad-free Starshell</strong> &mdash; a one-off, non-consumable purchase, on
+              that store account, that permanently stops the ads shown between flights. It gives
+              no gameplay advantage, and it does not remove the optional Second wind ad, which you
+              choose to watch.
             </li>
           </ul>
           <p>
@@ -394,9 +394,9 @@ export default function StarshellLegal({ focus }) {
             the content is delivered to you, which for this purchase is immediate.
           </p>
 
-          <h3>5. Scores, records and the sky book</h3>
+          <h3>5. Scores and records</h3>
           <p>
-            Scores, records, daily results, the sky book and a festival in progress are{' '}
+            Scores, records and a flight in progress are{' '}
             <strong>not property and have no monetary value</strong>. You do not own them; you hold
             a limited licence to use them inside the game. They cannot be sold, transferred between
             accounts or devices, or exchanged for money or anything outside the game.
@@ -407,27 +407,27 @@ export default function StarshellLegal({ focus }) {
           <ul>
             <li>
               <strong>Your progress is stored on your device, not on a server.</strong> If you
-              uninstall the game, reset the device, or lose it, your records, the sky book and any
-              festival in progress are gone and cannot be recovered by us.
+              uninstall the game, reset the device, or lose it, your records and any flight in
+              progress are gone and cannot be recovered by us.
             </li>
             <li>
-              <strong>Master Pyrotechnician is the exception.</strong> Because it is a
+              <strong>Ad-free Starshell is the exception.</strong> Because it is a
               non-consumable purchase recorded against your store account, it can be restored on a
-              new device with the <em>Restore</em> button on the game&rsquo;s home screen.
+              new device with <em>Restore purchases</em> in the game&rsquo;s Settings.
             </li>
           </ul>
           <p>
-            We may change the balance of the game &mdash; what a star is worth, the quota for a
-            night, which rewards are offered, how often an end-of-run ad is considered &mdash; as
-            part of normal updates.
+            We may change the balance of the game &mdash; how fast the sky grows busier, what
+            starlight is worth, which upgrades are offered, how often a break between flights is
+            considered &mdash; as part of normal updates.
           </p>
 
           <h3>6. Advertising</h3>
           <p>
-            Unless you have purchased Master Pyrotechnician, the game may show an ad at the end of
-            some runs. Separately, and whether or not you have bought anything, you may choose to
-            watch an ad for a relight or for a reroll, when offered; neither is ever shown
-            unless you ask for it. Advertising is supplied by third parties; we do not control which
+            Unless you have purchased Ad-free Starshell, the game may show an ad between
+            flights, after you ask for a new one and before it begins. Separately, and whether or
+            not you have bought anything, you may choose to watch an ad for Second wind when a
+            flight ends; it is never shown unless you ask for it. Advertising is supplied by third parties; we do not control which
             specific ads are shown and are not responsible for their content or for anything you buy
             from an advertiser. What advertising partners collect is described in the{' '}
             <a href="#privacy">Privacy Policy</a> above.

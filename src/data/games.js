@@ -6,7 +6,7 @@
    Colours are not approximations: they are the values the apps actually render.
    Outrush's come from OutrushRN/src/ui/theme.js, Huecomb's from
    HuecombRN/src/ui/theme.js, Scrapglow's from ScrapglowRN/src/game/Scene.js,
-   Starshell's from StarshellRN/src/ui/theme.js, Pearlbound's from
+   Starshell's from StarshellRN/src/orbit/OrbitScene.js and src/core/orbit.js, Pearlbound's from
    PearlboundRN/src/game/Scene.tsx, Wreckmoor's from
    WreckmoorRN/src/game/Scene.js and App.js, Rift Hauler's from
    RiftHaulerApp/src/style.css, Leadlight's from LeadlightRN/src/ui/theme.js,
@@ -109,31 +109,31 @@ export const games = [
   {
     slug: 'starshell',
     name: 'Starshell',
-    subtitle: 'The order is the whole game',
-    genre: 'Ordering puzzle',
+    subtitle: 'One ship. An endless sky.',
+    genre: 'Orbital arcade',
     year: '2026',
     status: 'soon',
     featured: false,
     art: 'starshell',
-    tagline: 'Five stars. One best order.',
+    tagline: 'Find your orbit. Keep your light.',
     blurb:
-      'Pack a firework shell with stars and launch it. It fires bottom to top, and every star changes what happens above it — so five stars is a hundred and twenty orderings, and exactly one of them is best.',
-    short: 'It fires bottom to top. Every star changes the one above.',
+      'A small white ship circles a distant world on its own, and one tap reverses it. Meteors fall where you are heading and starlight fades if you leave it behind, so every second asks the same question: keep going, or turn?',
+    short: 'One tap turns your orbit. Meteors fall where you are heading.',
     theme: {
-      ground: '#0A0A18',
-      surface: '#14142A',
-      line: '#2B2B4D',
-      accent: '#FFD166',
-      onAccent: '#241A00',
-      ink: '#EEF0FF',
-      inkMute: '#8B8FB5',
-      inkFaint: '#5A5E80',
+      ground: '#0A121D',
+      surface: '#111E2B',
+      line: '#22303D',
+      accent: '#8DE8D5',
+      onAccent: '#11292A',
+      ink: '#F2F0E9',
+      inkMute: '#8C9BAA',
+      inkFaint: '#5C6B7A',
     },
     facts: [
-      ['120', 'Ways to pack five stars'],
-      ['22', 'Stars that change each other'],
-      ['14', 'Nights in a festival'],
-      ['1', 'Daily bench, the same for all'],
+      ['1', 'Tap to turn your orbit'],
+      ['4', 'Skies that cycle for ever'],
+      ['∞', 'Sectors, and no finish line'],
+      ['0', 'Accounts or logins'],
     ],
     hasLegal: true,
   },

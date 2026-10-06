@@ -1,7 +1,7 @@
 import OutrushBoard from './OutrushBoard.jsx';
 import HuecombComb from './HuecombComb.jsx';
 import ScrapglowArena from './ScrapglowArena.jsx';
-import StarshellShell from './StarshellShell.jsx';
+import StarshellOrbit from './StarshellOrbit.jsx';
 import PearlboundReef from './PearlboundReef.jsx';
 import WreckmoorYard from './WreckmoorYard.jsx';
 import RiftHaulerIsland from './RiftHaulerIsland.jsx';
@@ -15,7 +15,7 @@ const SIZES = {
   outrush:   { micro: 8,  thumb: 20,  phone: 27,  card: 31,  hero: 'clamp(34px, 6.2vw, 56px)' },
   huecomb:   { micro: 8,  thumb: 21,  phone: 25,  card: 30,  hero: 'clamp(30px, 5.2vw, 48px)' },
   scrapglow: { micro: 58, thumb: 152, phone: 200, card: 250, hero: 'clamp(260px, 32vw, 400px)' },
-  starshell: { micro: 58, thumb: 112, phone: 176, card: 230, hero: 'clamp(250px, 29vw, 350px)' },
+  starshell: { micro: 58, thumb: 132, phone: 190, card: 240, hero: 'clamp(260px, 31vw, 390px)' },
   pearlbound: { micro: 58, thumb: 132, phone: 190, card: 240, hero: 'clamp(260px, 31vw, 390px)' },
   wreckmoor: { micro: 58, thumb: 132, phone: 190, card: 240, hero: 'clamp(260px, 31vw, 390px)' },
   rifthauler: { micro: 58, thumb: 132, phone: 190, card: 240, hero: 'clamp(260px, 31vw, 390px)' },
@@ -34,9 +34,8 @@ export default function GameArt({ slug, size = 'card', ...rest }) {
   if (slug === 'outrush') return <OutrushBoard cell={s} pop={bare ? null : '+2,400 ×4'} {...rest} />;
   if (slug === 'huecomb') return <HuecombComb u={s} tray={!bare} {...rest} />;
   if (slug === 'scrapglow') return <ScrapglowArena size={s} {...rest} />;
-  /* at micro size the shell is unreadable, so it is the burst on its own —
-     which is also the app icon */
-  if (slug === 'starshell') return <StarshellShell size={s} mark={size === 'micro'} {...rest} />;
+  /* the app icon's world and orbit, where the sky would be specks */
+  if (slug === 'starshell') return <StarshellOrbit size={s} mark={size === 'micro'} {...rest} />;
   /* the pearl in its shell, the app icon, where the reef would be specks */
   if (slug === 'pearlbound') return <PearlboundReef size={s} mark={size === 'micro'} {...rest} />;
   /* the skiff and its ball, the app icon, where the yard would be specks */

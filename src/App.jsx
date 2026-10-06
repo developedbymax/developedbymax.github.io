@@ -19,6 +19,8 @@ import Leadlight from './pages/Leadlight.jsx';
 import LeadlightLegal from './pages/LeadlightLegal.jsx';
 import Floehelm from './pages/Floehelm.jsx';
 import FloehelmLegal from './pages/FloehelmLegal.jsx';
+import Sirocco from './pages/Sirocco.jsx';
+import SiroccoLegal from './pages/SiroccoLegal.jsx';
 import NotFound from './pages/NotFound.jsx';
 
 import './styles/base.css';
@@ -61,6 +63,8 @@ export default function App() {
         <Route path="/leadlight/terms" element={<LeadlightLegal focus="terms" />} />
         <Route path="/floehelm" element={<Floehelm />} />
         <Route path="/floehelm/privacy" element={<FloehelmLegal />} />
+        <Route path="/sirocco" element={<Sirocco />} />
+        <Route path="/sirocco/privacy" element={<SiroccoLegal />} />
 
         {/* The .html spelling of each game's legal page. Outrush's privacy URL is
             baked into the shipped app and into two store listings, so that one has
@@ -83,6 +87,7 @@ export default function App() {
         <Route path="/leadlight/privacy.html" element={<LeadlightLegal />} />
         <Route path="/leadlight/terms.html" element={<LeadlightLegal focus="terms" />} />
         <Route path="/floehelm/privacy.html" element={<FloehelmLegal />} />
+        <Route path="/sirocco/privacy.html" element={<SiroccoLegal />} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>

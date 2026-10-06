@@ -288,3 +288,6 @@
 
 /* Floehelm: the bay, and the app icon at micro size */
 .fh { width: 100%; height: auto; filter: drop-shadow(0 22px 40px rgba(0,0,0,.6)); }
+
+/* Sirocco Courier: the airfield postcard, and the app icon at micro size */
+.sc { width: 100%; height: auto; filter: drop-shadow(0 22px 40px rgba(0,0,0,.55)); }

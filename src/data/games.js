@@ -292,6 +292,40 @@ export const games = [
     ],
     hasLegal: true,
   },
+  {
+    slug: 'sirocco',
+    name: 'Sirocco Courier',
+    subtitle: 'Desert air mail',
+    genre: 'Endless glider',
+    year: '2026',
+    status: 'soon',
+    featured: false,
+    art: 'sirocco',
+    tagline: 'A little courage. A long way home.',
+    blurb:
+      'Steer a paper glider across an endless desert with one thumb. Ride the thermals for height, skim low to pick up letters, and deliver them to the next haven, or bypass it for a bigger payout.',
+    short: 'Ride the thermals, skim for letters, deliver them home.',
+    /* The game's own palette, inverted for the site's dark ground: the app
+       icon's plum is the page, the glider's coral is the accent, and the game's
+       paper becomes the ink. */
+    theme: {
+      ground: '#2A2231',
+      surface: '#382D40',
+      line: '#54465C',
+      accent: '#E0866A',
+      onAccent: '#2A2231',
+      ink: '#F5EBDC',
+      inkMute: '#C9B8A9',
+      inkFaint: '#927F86',
+    },
+    facts: [
+      ['3', 'Desert regions'],
+      ['3', 'Gliders to earn'],
+      ['9', 'Upgrades, stacking to 3'],
+      ['3×', 'Delivery multiplier'],
+    ],
+    hasLegal: true,
+  },
 ];
 
 export const bySlug = (slug) => games.find((g) => g.slug === slug);

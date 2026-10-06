@@ -185,8 +185,8 @@
 .fam-foot b { color: var(--ink); }
 
 /* a star's mark standing in for the coloured chip */
-.kind .sq.ss-sq, .kind .sq.pb-sq, .kind .sq.rh-sq, .kind .sq.cw-sq, .kind .sq.ll-sq, .kind .sq.fh-sq { background: color-mix(in srgb, var(--ink) 6%, transparent); border: 1px solid var(--line); }
-.kind .sq.ss-sq::after, .kind .sq.pb-sq::after, .kind .sq.rh-sq::after, .kind .sq.cw-sq::after, .kind .sq.ll-sq::after, .kind .sq.fh-sq::after { display: none; }
+.kind .sq.ss-sq, .kind .sq.pb-sq, .kind .sq.rh-sq, .kind .sq.cw-sq, .kind .sq.ll-sq, .kind .sq.fh-sq, .kind .sq.sc-sq { background: color-mix(in srgb, var(--ink) 6%, transparent); border: 1px solid var(--line); }
+.kind .sq.ss-sq::after, .kind .sq.pb-sq::after, .kind .sq.rh-sq::after, .kind .sq.cw-sq::after, .kind .sq.ll-sq::after, .kind .sq.fh-sq::after, .kind .sq.sc-sq::after { display: none; }
 
 /* ---------- Leadlight: the four sparks, and the six panes ---------- */
 .ll-kinds { list-style: none; padding: 0; margin: 14px 0 0; display: grid; gap: 14px; }

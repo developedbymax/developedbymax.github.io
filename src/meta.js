@@ -143,6 +143,20 @@ export const meta = {
     themeColor: '#102635',
     favicon: '/favicon-floehelm.svg',
   },
+  '/sirocco': {
+    title: 'Sirocco Courier — an endless desert glider for iOS and Android',
+    description:
+      'Steer a paper glider across an endless desert with one thumb. Ride the thermals, skim low for letters, and deliver them to the next haven or bypass it for a bigger payout. Free, and it plays offline.',
+    themeColor: '#2A2231',
+    favicon: '/favicon-sirocco.svg',
+  },
+  '/sirocco/privacy': {
+    title: 'Privacy Policy & Terms of Use — Sirocco Courier',
+    description:
+      'What Sirocco Courier stores on your device, what its advertising partner collects, what Remove Ads and the Dusk Post Pack do, and the terms you agree to when you play.',
+    themeColor: '#2A2231',
+    favicon: '/favicon-sirocco.svg',
+  },
   '/rifthauler': {
     title: 'Rift Hauler — a crystal mining run for iOS and Android',
     description:
@@ -216,7 +230,8 @@ export const meta = {
    Wreckmoor's, /wreckmoor/terms, Rift Hauler's, /rifthauler/terms, and
    Leadlight's, /leadlight/terms, which its store copy names as terms.html.
    Floehelm has no terms address: its terms are on its privacy page, reached
-   as /floehelm/privacy#terms. */
+   as /floehelm/privacy#terms. Sirocco Courier follows Floehelm: one legal
+   page, terms at /sirocco/privacy#terms. */
 export const ALIASES = {
   '/outrush/privacy.html': '/outrush/privacy',
   '/huecomb/privacy.html': '/huecomb/privacy',
@@ -232,6 +247,7 @@ export const ALIASES = {
   '/leadlight/privacy.html': '/leadlight/privacy',
   '/leadlight/terms.html': '/leadlight/terms',
   '/floehelm/privacy.html': '/floehelm/privacy',
+  '/sirocco/privacy.html': '/sirocco/privacy',
 };
 
 export const ROUTES = [
@@ -245,4 +261,5 @@ export const ROUTES = [
   '/rifthauler', '/rifthauler/privacy', '/rifthauler/terms',
   '/leadlight', '/leadlight/privacy', '/leadlight/terms',
   '/floehelm', '/floehelm/privacy',
+  '/sirocco', '/sirocco/privacy',
 ];

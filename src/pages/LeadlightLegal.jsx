@@ -13,23 +13,8 @@ const NAV = [
   ['Terms', '#terms'],
 ];
 
-/* Leadlight's own documents, written against what LeadlightRN actually does.
-
-   What sets it apart. It sells ONE purchase, Master Glazier, which ends the break
-   ad between runs and opens every glass palette, but keeps the optional mend — so
-   the ad SDK still runs for an owner (App.js starts it whatever the player owns;
-   policy.adFormatsFor() drops only the interstitial). Ads, and with them the
-   consent questions, start only after the first finished run and only once the
-   store has reported ownership (policy.adsMayStart, App.js startAds). A finished
-   window can be shared as a picture: share.native.js draws it on the device,
-   writes one PNG to the app's cache and hands it to the system share sheet — no
-   photo-library permission, and nothing is sent by the game itself. And the game
-   makes no network request of its own: no crash reporter, no analytics and no
-   expo-updates.
-
-   Served at /leadlight/privacy and /leadlight/terms, with the .html spelling of
-   both, because LeadlightRN's store copy names /leadlight/privacy.html and
-   /leadlight/terms.html. The terms address opens this same page at the terms. */
+/* Atelier Edition: no account backend; local progress and store entitlement.
+   Master Glazier removes interstitials, not optional rewarded mend videos. */
 export default function LeadlightLegal({ focus }) {
   useMeta(meta[focus === 'terms' ? '/leadlight/terms' : '/leadlight/privacy']);
   const { hash } = useLocation();
@@ -43,7 +28,7 @@ export default function LeadlightLegal({ focus }) {
   return (
     <GameShell game={game} links={NAV} legal>
       <div className="wrap prose">
-        <p className="updated">Last updated &middot; 29 September 2026</p>
+        <p className="updated">Last updated &middot; 8 October 2026</p>
         <h1>Privacy Policy &amp; Terms of Use</h1>
         <p>
           Two documents, kept on one page so there is only one link to follow. The privacy
@@ -66,10 +51,7 @@ export default function LeadlightLegal({ focus }) {
           <div className="callout">
             <p>
               <strong>The short version.</strong> Leadlight has no account and no server of its
-              own, and it makes no network requests of its own. Your records, your gallery of
-              windows and the run you are part way through live on your phone and are never
-              uploaded. The one thing that leaves your device without you choosing to send it
-              is advertising data, collected by our ad partner so it can serve ads.
+              own, and it makes no network requests of its own. Your records, your collection of windows and your unfinished run stay on your device. Advertising and store SDKs communicate with their providers to serve ads, manage consent and process purchases, as described below.
             </p>
             <p>
               <strong>Read section 2 before you buy.</strong> Master Glazier ends the ad between
@@ -91,55 +73,24 @@ export default function LeadlightLegal({ focus }) {
 
           <h3>1. What the game stores on your device</h3>
           <p>
-            The game keeps three small records on your phone, and a picture of each window in your
-            gallery. Nothing in them is transmitted to us: Leadlight has no backend server of its
-            own, and none of it is uploaded anywhere.
+            The game stores your progress on your device. None of your scores or artwork is uploaded to a developer-operated server.
           </p>
           <ul>
-            <li>
-              Your records &mdash; best score, most windows in one run, most jewels in one window,
-              best combo, how many runs you have finished, and your totals of windows, jewels and
-              seconds played
-            </li>
-            <li>
-              Your gallery &mdash; the windows you have finished, the last thirty and your best,
-              each with its shape, its glass, its score and the date you made it. A picture of each
-              is drawn on the device and kept in the game&rsquo;s cache, so the gallery opens
-              quickly.
-            </li>
-            <li>Today&rsquo;s daily window result, so the daily is played once a day, and your best daily score</li>
-            <li>Whether sound is on, which glass palette you chose, and whether you have played your first run</li>
-            <li>The run in progress, so closing or backgrounding the game does not lose it</li>
-            <li>When the last ad between runs was shown, so they can be kept apart</li>
-            <li>Whether you own Master Glazier &mdash; a single yes or no</li>
+            <li>Your best score, successful streaks, cut and perfect-cut totals, completed windows and run counts</li>
+            <li>Your collection of the most recent thirty Atelier windows, including their generated shapes, names and scores</li>
+            <li>Your current run, so you can return to an unfinished pane</li>
+            <li>Your palette, sound and haptic preferences</li>
+            <li>Your locally cached Master Glazier entitlement, checked with the store</li>
+            <li>Original-edition progress and artwork, retained for compatibility when updating</li>
           </ul>
           <p>
-            That is the whole list. The game has no player name, no profile and no in-game
-            currency, so there is nothing else for it to keep.
+            Your local progress is not backed up to us and cannot be recovered by us after it is removed. Clearing app data or uninstalling removes local records. Device or store backups, if enabled, are governed by Apple’s or Google’s policies. Store purchases can be restored through the same store account.
           </p>
           <p>
-            This data stays on the device. It is not backed up to us, it is not readable by
-            us, and <strong>deleting the game deletes all of it</strong>. If your device or app
-            store is configured to back up app data, that backup is governed by Apple&rsquo;s or
-            Google&rsquo;s own policies, not by this one.
+            The Atelier edition has no in-app window-sharing feature and does not read your photo library. Screenshots you take and share using your device are handled by the services you choose.
           </p>
           <p>
-            <strong>When you share a window</strong>, the game draws it as a picture on your
-            device, writes that one picture to its own cache, and hands it to your phone&rsquo;s
-            share sheet. Where it goes from there &mdash; a message, a social app, your photos
-            &mdash; is your choice, and is governed by that app or service, not by this policy.
-            The game sends it nowhere itself, and never reads your photo library. On iOS, the first time you choose <em>Save Image</em>, your phone asks whether Leadlight may add pictures to your photos: that permission can only add a picture, never see the ones already there, and you can change it at any time in <em>Settings &rarr; Leadlight &rarr; Photos</em>. The next
-            window you share replaces the previous picture.
-          </p>
-          <p>
-            The game makes <strong>no network requests of its own</strong>. It does not check
-            for updates, it reports nothing about how you play, and it has no server to talk to.
-            The only connections it makes are the advertising in section 2 and the store in
-            section 3.
-          </p>
-          <p>
-            The daily window is generated from your device&rsquo;s own calendar date. Your date
-            is read on the device and never sent anywhere.
+            Leadlight has no developer analytics or crash-reporting service. Network connections used by the app are for advertising, consent and store purchases, as described below. Gameplay itself works offline.
           </p>
 
           <h3>2. What our advertising partner collects</h3>
@@ -156,7 +107,7 @@ export default function LeadlightLegal({ focus }) {
             </li>
             <li>
               <strong>A mend</strong>, which you choose to watch, to mend one crack and carry on in
-              the same window.
+              the same run, once per run when offered.
             </li>
           </ul>
           <p>
@@ -223,7 +174,7 @@ export default function LeadlightLegal({ focus }) {
             <li>
               <strong>In the EEA and the UK</strong>, Google&rsquo;s consent dialog appears before
               any ad is requested, and your answer is recorded on your device. You can reopen it at
-              any time from <em>Ad privacy choices</em> at the foot of the game&rsquo;s home
+              any time from <em>Ad privacy choices</em> in the game&rsquo;s Settings
               screen.
             </li>
             <li>
@@ -269,7 +220,7 @@ export default function LeadlightLegal({ focus }) {
             <li>No gameplay analytics sent anywhere.</li>
             <li>No crash reporting.</li>
             <li>No network requests of its own, not even to check for updates.</li>
-            <li>No sharing of your windows unless you share one yourself.</li>
+            <li>No upload of your window collection to us.</li>
             <li>No selling of personal information by us to anyone.</li>
           </ul>
 
@@ -382,8 +333,7 @@ export default function LeadlightLegal({ focus }) {
               <strong>Master Glazier</strong> &mdash; a one-off, non-consumable purchase, on that
               store account, that permanently stops the break ads between runs and opens all five
               glass palettes, which can otherwise be earned by playing. It cannot buy a life, a
-              jewel or a point, and the daily window is the same whether you own it or not. It does
-              not remove the optional mend, which you choose to watch.
+              point or a higher score. It does not remove optional rewarded mend videos, which you choose to watch.
             </li>
           </ul>
           <p>
@@ -405,7 +355,7 @@ export default function LeadlightLegal({ focus }) {
 
           <h3>5. Scores, records and your gallery</h3>
           <p>
-            Scores, records, daily results, unlocked palettes, the windows in your gallery and a run
+            Scores, records, unlocked palettes, the windows in your gallery and a run
             in progress are <strong>not property and have no monetary value</strong>. You do not own
             them; you hold a limited licence to use them inside the game. They cannot be sold,
             transferred between accounts or devices, or exchanged for money or anything outside the
@@ -418,18 +368,17 @@ export default function LeadlightLegal({ focus }) {
             <li>
               <strong>Your progress is stored on your device, not on a server.</strong> If you
               uninstall the game, reset the device, or lose it, your records, your gallery and any
-              run in progress are gone and cannot be recovered by us. A picture of a window you have
-              shared is wherever you sent it.
+              run in progress are gone and cannot be recovered by us. Screenshots you have saved separately remain wherever you saved them.
             </li>
             <li>
               <strong>Master Glazier is the exception.</strong> Because it is a non-consumable
               purchase recorded against your store account, it can be restored on a new device with
-              the <em>Restore purchase</em> link on the game&rsquo;s home screen.
+              the <em>Restore purchase</em> control in the game&rsquo;s Settings screen.
             </li>
           </ul>
           <p>
-            We may change the balance of the game &mdash; how many sparks a window has and how fast
-            they move, what a jewel or a combo is worth, how often a break ad is considered &mdash;
+            We may change the balance of the game &mdash; pane shapes, target proportions, tolerances,
+            scoring and how often a break ad is considered &mdash;
             as part of normal updates.
           </p>
 

@@ -180,24 +180,24 @@ export const meta = {
   },
 
   '/leadlight': {
-    title: 'Leadlight: Glass Cutter — a stained-glass arcade game for iOS and Android',
+    title: 'Leadlight: Glass Cutter — endless precision, no timer',
     description:
-      'Sparks bounce inside a pane of clear glass. Swipe to cut it at any angle, seal the sparks out, and every piece left with no spark in it floods with colour. Free, offline, no account.',
-    themeColor: '#110E13',
+      'Cut by eye, chase a perfect streak and collect stained-glass windows. An endless precision puzzle for iPhone, iPad and Android. No timer. No account.',
+    themeColor: '#F6F3EA',
     favicon: '/favicon-leadlight.svg',
   },
   '/leadlight/privacy': {
     title: 'Privacy Policy & Terms of Use — Leadlight',
     description:
-      'What Leadlight stores on your device, what its advertising partner collects, what Master Glazier does and does not stop, how a shared window leaves your phone, and the terms you agree to when you play.',
-    themeColor: '#110E13',
+      'What Leadlight stores on your device, what its advertising partner collects, what Master Glazier does and does not stop, how your collection stays on your device, and the terms you agree to when you play.',
+    themeColor: '#F6F3EA',
     favicon: '/favicon-leadlight.svg',
   },
   '/leadlight/terms': {
     title: 'Terms of Use & Privacy Policy — Leadlight',
     description:
       'The terms you agree to when you play Leadlight, on the same page as its privacy policy: the one purchase, the optional mend, and what happens to your windows and records.',
-    themeColor: '#110E13',
+    themeColor: '#F6F3EA',
     favicon: '/favicon-leadlight.svg',
   },
 

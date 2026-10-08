@@ -4,6 +4,7 @@ import { bySlug } from '../data/games.js';
 import GameShell from '../components/GameShell.jsx';
 import useMeta from '../components/useMeta.js';
 import { meta } from '../meta.js';
+import '../styles/leadlight.css';
 
 const game = bySlug('leadlight');
 
@@ -26,7 +27,7 @@ export default function LeadlightLegal({ focus }) {
   }, [focus, hash]);
 
   return (
-    <GameShell game={game} links={NAV} legal>
+    <div className="atelier-site"><GameShell game={game} links={NAV} legal>
       <div className="wrap prose">
         <p className="updated">Last updated &middot; 8 October 2026</p>
         <h1>Privacy Policy &amp; Terms of Use</h1>
@@ -470,6 +471,6 @@ export default function LeadlightLegal({ focus }) {
           </p>
         </section>
       </div>
-    </GameShell>
+    </GameShell></div>
   );
 }

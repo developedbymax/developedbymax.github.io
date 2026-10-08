@@ -24,7 +24,11 @@ export default function Leadlight() {
     <h2>A little precision.<br/>An endless play of light.</h2>
     <p className="lede">Cut by eye. Find your rhythm. Turn six good cuts into a window worth keeping.</p>
     <div className="cta-row"><a className="btn btn-key" href="#play">Learn the art of a cut<Arrow/></a><a className="atelier-text-link" href="#film">Watch the film ↗</a></div>
-    <p className="atelier-availability">Coming to the App Store and Google Play.<br/>Free to play. One optional purchase.</p>
+    <div className="atelier-store-buttons" role="group" aria-label="Store availability">
+      <button className="atelier-store-button" type="button" disabled><span>Coming soon on the</span><strong>App Store</strong></button>
+      <button className="atelier-store-button" type="button" disabled><span>Coming soon on</span><strong>Google Play</strong></button>
+    </div>
+    <p className="atelier-availability">Free to play. One optional purchase.</p>
    </div>
    <figure className="atelier-hero-art"><LeadlightWindow size="clamp(270px, 36vw, 460px)"/><figcaption>Nº 001 / FIRST LIGHT</figcaption></figure>
   </section>

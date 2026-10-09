@@ -29,7 +29,7 @@ export default function LeadlightLegal({ focus }) {
   return (
     <div className="atelier-site"><GameShell game={game} links={NAV} legal>
       <div className="wrap prose">
-        <p className="updated">Last updated &middot; 8 October 2026</p>
+        <p className="updated">Last updated &middot; 9 October 2026</p>
         <h1>Privacy Policy &amp; Terms of Use</h1>
         <p>
           Two documents, kept on one page so there is only one link to follow. The privacy
@@ -217,7 +217,7 @@ export default function LeadlightLegal({ focus }) {
           <h3>5. What the game does not do</h3>
           <ul>
             <li>No account, sign-in, email address or password.</li>
-            <li>No access to location, contacts, camera or microphone, and no reading of your photos &mdash; only adding a window you choose to save.</li>
+            <li>No access to location, contacts, camera, microphone or your photo library.</li>
             <li>No gameplay analytics sent anywhere.</li>
             <li>No crash reporting.</li>
             <li>No network requests of its own, not even to check for updates.</li>

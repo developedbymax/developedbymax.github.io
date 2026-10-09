@@ -7,7 +7,7 @@
    and not a stylesheet change.
    ========================================================================== */
 
-.gpage { position: relative; background: var(--ground); }
+.gpage { position: relative; background: var(--ground); color: var(--ink); }
 .gpage .field {
   background:
     radial-gradient(58rem 40rem at 80% -8%, color-mix(in srgb, var(--accent) 13%, transparent), transparent 62%),

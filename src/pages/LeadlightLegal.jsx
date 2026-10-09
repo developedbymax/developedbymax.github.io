@@ -27,7 +27,7 @@ export default function LeadlightLegal({ focus }) {
   }, [focus, hash]);
 
   return (
-    <div className="atelier-site"><GameShell game={game} links={NAV} legal>
+    <GameShell game={game} links={NAV} legal>
       <div className="wrap prose">
         <p className="updated">Last updated &middot; 9 October 2026</p>
         <h1>Privacy Policy &amp; Terms of Use</h1>
@@ -471,6 +471,6 @@ export default function LeadlightLegal({ focus }) {
           </p>
         </section>
       </div>
-    </GameShell></div>
+    </GameShell>
   );
 }
